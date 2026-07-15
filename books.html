@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Styles/bookstyle (1).css">
+    <link rel="stylesheet" href="Styles/bootstrap.min (1).css">
+    <link rel="icon" href="Pictures/sadetnalogo (2).png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Books</title>
+    <style>
+      h2{
+        color:white
+      }
+      
+      .page{
+        font-size: 1.2rem;
+      }
+      #national, #international{
+        color: white;
+      }
+    </style>
+
+
+    
+
+
+</head>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="try.html"><img src="Pictures/sadetnalogo (2).png" alt="" width="60px" style="display: inline-block; margin-right: 10px;">Reading Gallery</a>
+
+
+        <!-- Hamburger -->
+        <button class="navbar-toggler ms-auto"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link page" href="../try.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="books.html" class="nav-link page" id="current">Books</a>
+                </li>
+                <li class="nav-item">
+                  <a href="Author (1).html" class="nav-link page">Authors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page" href="Libraries.html">Libraries</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page" href="Sites.html">Reading Sites</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Trivia.html" class="nav-link page">Trivia</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Feedback (2).html" class="nav-link page">Feedback</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+</header>
+
+<div class="books-header">
+<p class="books-intro">
+          Books have the power to inspire, educate, and entertain readers of all ages<br>
+          Below are ten of the world's most famous books, each celebrated for it's <br>
+          unforgetable stories, timeless lesson, and lasting impact on literature.<br>
+          Explore these classic and discover why millions of readers continue to love them
+         </p>
+<p class="note">
+         <strong> 📌 Note:</strong> Click any book's picture to view their complete Description, Genre,
+         Author and Release Date
+
+         </p>
+         <h2 id="international">Top 10 International Books</h2>    
+         
+
+         </p>
+         </div>
+ 
+
+   <section class="book-container">
+
+  <div class="book">
+
+    <img src="Pictures/harry potter.jpg" alt="Harrypotter" width="200" onclick="openPopup()">
+    <h3>Harry Potter and the philosopher's stone</h3>
+
+ 
+  </div>
+  <div class="book">
+
+
+    <img src="Pictures/the little prince.webp" alt=" The Little Prince" width="200" onclick="openPopup2()">
+
+
+
+    <h3>The Little Prince</h3>
+    
+  </div>
+    <div class="book">
+   
+    <img src="Pictures/The alchemist.jpg" alt="The Alchemist" width="200" onclick="openPopup3()">
+    
+    <h3>The Alchemist</h3>
+    
+  </div>
+   <div class="book">
+
+    
+    <img src="Pictures/To kill mockngbird.webp" alt="To Kill a Mockingbird" width="200" onclick="openPopup4()">
+    
+
+    <h3>To Kill a Mockingbird</h3>
+     
+  </div>
+   <div class="book">
+    <img src="Pictures/1984.jpg" alt="1984" width="200" onclick="openPopup5()">
+    
+
+    <h3>1984</h3>
+     
+  </div>
+  <div class="book">
+    
+    <img src="Pictures/Pride.webp" alt="Twilightsaga" width="200" onclick="openPopup6()">
+    
+
+
+    <h3>Twilight Saga</h3>
+    </div>
+        <div class="book">
+      
+        <img src="Pictures/The hobbit.webp" alt="The Hobbit" width="200" onclick="openPopup7()">
+      
+
+        <h3>The Hobbit</h3>
+         
+    </div>
+    <div class="book">
+
+     
+        <img src="Pictures/Lord of rings.webp" alt="The lord of the Rings" width="200" onclick="openPopup8()">
+
+      
+
+        <h3>The lord of the Rings</h3>
+        </div>
+          <div class="pic9">
+      
+        <img src="Pictures/diary.jpg" alt="The Diary of a Young Girl" width="200" onclick="openPopup9()">
+        
+
+        <h3>The Diary of a Young Girl</h3>
+         
+    </div>
+     <div class="pic10">
+      
+        <img src="Pictures/donquixote.jpg" alt="Don Quixote" width="200" onclick="openPopup10()">
+      
+        <h3>Don Quixote</h3>
+         
+    </div>
+
+
+  </section>
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('popup')"&times;></span>
+      
+      <img src="Pictures/harry potter.jpg" alt="Harry Potter" class="popup-img">
+      <h2>Harry Potter and the philosopher Stone</h2>
+      <p><b>Genre:</b>Fantasy,Adventure</p>
+      <p><b>Release Date:</b>June 26, 1997</p>
+      <p><b>Author: </b>J.K Rowling</p>
+      <p><b>Description: </b>Harry Potter discovers he is a wizzard and begins his
+      journey at hogwarts, where he makes friend, learn magic and faces dark wizzard voldemorts</p>
+      <p><b>Lesson of the book: </b>Friendship,courage, and love are stronger than fear and hatred.</p>
+
+
+    </div>
+
+  </div>
+
+  <div id="popup2" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('popup2')"&times;></span>
+      <img src="Pictures/the little prince.webp" alt="The Little Prince" class="popup-img">
+      <h2>The Little Prince</h2>
+      <p><b>Genre:</b>Fantasy,Adventure, Fable</p>
+      <p><b>Release Date:</b>April 6, 1943</p>
+      <p><b>Author: </b>Louise Greig</p>
+      <p><b>Description: </b>The Little Prince tells the story of a young prince who travels from planet to planet, meeting different characters and learning important lessons about life, love, friendship, and human nature. Through his journey and his friendship with a stranded pilot, the book explores how adults often lose sight of what truly matters, while children are able to see the world with innocence, imagination, and sincerity.</p>
+      <p><b>Lesson of the book: </b>The main lesson of The Little Prince is that the most important things in life cannot be seen with the eyes but must be felt with the heart. The story teaches the value of love, friendship, responsibility, kindness, and maintaining a sense of wonder and imagination even as we grow older.</p>
+      
+
+
+    </div>
+
+  </div>
+  <div id="popup3" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('popup3')"&times;></span>
+      
+      <img src="Pictures/The alchemist.jpg" alt="The Alchemist" class="popup-img">
+      <h2>The Alchemist</h2>
+      <p><b>Genre:</b>Quest,Adventure, Philosopical Fiction</p>
+      <p><b>Release Date:</b>No specific date,1988</p>
+      <p><b>Author: </b>Louise Greig</p>
+      <p><b>Description: </b>The Alchemist is a philosophical adventure novel written by Paulo Coelho and first published in 1988. It follows Santiago, a young shepherd from Spain, who dreams of discovering a hidden treasure in Egypt. Along his journey, he meets people who teach him valuable lessons about courage, perseverance, faith, and following his dreams. The novel explores the idea that everyone has a unique purpose in life, known as their "Personal Legend."</p>
+      <p><b>Lesson of the book: </b>The main lesson of The Alchemist is that people should have the courage to follow their dreams and trust the journey, even when faced with challenges and uncertainty. It teaches that perseverance, self-belief, and listening to one's heart can lead to personal growth and the fulfillment of one's true purpose.</p>
+      
+
+
+    </div>
+
+  </div>
+  <div id="popup4" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('popup4')"&times;></span>
+      <img src="Pictures/To kill mockngbird.webp" alt="To Kill a Mockingbird" class="popup-img">
+      <h2>To kill a Mockingbird</h2>
+      <p><b>Genre:</b>Southern Gothic, Coming of Age, Historical Fiction, Social Drama</p>
+      <p><b>Release Date:</b> July 11, 1960</p>
+      <p><b>Author: </b> Harper Lee</p>
+      <p><b>Description: </b>To Kill a Mockingbird is a classic novel written by Harper Lee and first published on July 11, 1960. The story is told through the eyes of Scout Finch, a young girl growing up in the American South during the 1930s. As her father, lawyer Atticus Finch, defends a Black man falsely accused of a crime, Scout learns about justice, prejudice, compassion, and the importance of doing what is right despite opposition.</p>
+      <p><b>Lesson of the book: </b>The main lesson of The Alchemist is that people should have the courage to follow their dreams and trust the journey, even when faced with challenges and uncertainty. It teaches that perseverance, self-belief, and listening to one's heart can lead to personal growth and the fulfillment of one's true purpose.</p>
+      
+
+
+    </div>
+
+  </div>
+  <div id="popup5" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('popup5')"&times;></span>
+      
+      <img src="Pictures/1984.jpg" alt="1984" class="popup-img">
+      <h2>1984</h2>
+      <p><b>Genre:</b>Social Criticism,Dystopian Fiction,Political Fiction,Science Fiction</p>
+      <p><b>Release Date:</b>June 8, 1949</p>
+      <p><b>Author: </b>George Orwell</p>
+      <p><b>Description: </b>1984 is a dystopian novel that follows Winston Smith, a man living under the oppressive rule of the Party, led by the mysterious Big Brother. In a society where the government controls information, history, and even people's thoughts, Winston secretly rebels in search of truth and freedom. The novel explores themes of totalitarianism, surveillance, censorship, and the abuse of power.</p>
+      <p><b>Lesson of the book: </b>The main lesson of 1984 is that freedom, truth, and independent thinking are essential to a just society. It warns that when governments or powerful institutions gain complete control over information and people's lives, individual rights and human dignity are at risk.</p>
+      
+
+
+    </div>
+
+  </div>
+  <div id="popup6" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('popup6')"&times;></span>
+      
+      <img src="Pictures/twi.jpg" alt="Twilight Saga" class="popup-img">
+      <h2>Twilight Saga</h2>
+      <p><b>Genre:</b>Fantasy,Romance,Young Adult Fiction,Paranormal Fiction</p>
+      <p><b>Release Date:</b>October 5,2005</p>
+      <p><b>Author: </b>Stephenie Meyer</p>
+      <p><b>Description: </b>The Twilight Saga follows Bella Swan, a teenage girl who moves to the town of Forks, Washington, where she falls in love with Edward Cullen, a vampire. As their relationship grows, Bella becomes caught in a world of vampires, werewolves, danger, and supernatural conflicts. The series explores themes of love, loyalty, sacrifice, and the challenges of choosing between different paths in life.</p>
+      <p><b>Lesson of the book: </b>The main lesson of The Twilight Saga is that love requires trust, sacrifice, and commitment. It also teaches the importance of making thoughtful choices, staying loyal to the people you care about, and accepting responsibility for the consequences of your decisions.</p>
+      
+
+
+    </div>
+
+  </div>
+  <div id="popup7" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('popup7')"&times;></span>
+      
+      <img src="Pictures/The hobbit.webp" alt="The Hobbit" class="popup-img">
+      <h2>The Hobbit</h2>
+      <p><b>Genre:</b>Fantasy,Adventure,High Fantasy, Children Literature</p>
+      <p><b>Release Date:</b>September 21,1937</p>
+      <p><b>Author: </b>J.R.R. Tolkien</p>
+      <p><b>Description: </b>The Hobbit is a fantasy novel that follows Bilbo Baggins, a peaceful hobbit who is unexpectedly invited on an adventure with a group of dwarves and the wizard Gandalf. Their quest is to reclaim the dwarves' treasure from the dragon Smaug. Along the way, Bilbo discovers courage, wisdom, and inner strength while facing dangerous creatures and difficult challenges.</p>
+      <p><b>Lesson of the book: </b>The main lesson of The Hobbit is that courage, kindness, and perseverance can help ordinary people accomplish extraordinary things. It also teaches that personal growth often comes from stepping outside one's comfort zone and embracing new experiences.</p>
+      
+
+
+    </div>
+
+  </div>
+  <div id="popup8" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup8('popup8')"&times;></span>
+      
+      <img src="Pictures/Lord of rings.webp" alt="Lord of the Rings" class="popup-img">
+      <h2>Lord of the Rings</h2>
+      <p><b>Genre:</b>High Fantasy, Epic Fantasy, Adventure, Fiction</p>
+      <p><b>Release Date:</b>July 29, 1954</p>
+      <p><b>Author: </b>J.R.R. Tolkien</p>
+      <p><b>Description: </b>The Lord of the Rings is an epic fantasy novel that follows Frodo Baggins, a young hobbit chosen to destroy the One Ring, a powerful object that could bring darkness to the world if it falls into the hands of the Dark Lord Sauron. Joined by a fellowship of loyal companions, Frodo faces dangerous enemies, difficult choices, and great sacrifices on his journey to save Middle-earth</p>
+      <p><b>Lesson of the book: </b>The main lesson of The Lord of the Rings is that courage, friendship, hope, and selflessness can overcome even the greatest evil. It teaches that every individual, no matter how ordinary they may seem, has the power to make a meaningful difference.</p>
+      
+
+
+    </div>
+
+  </div>
+  <div id="popup9" class="popup">
+    <div class="popup-content">
+    
+      <span class="close" onclick="closePopup8('popup9')"&times;></span>
+      <img src="Pictures/diary.jpg" alt="The Diary of a Young Girl" class="popup-img">
+      <h2>The Diary of a Young Girl</h2>
+      <p><b>Genre:</b>Autobiography</p>
+      <p><b>Release Date:</b>June 25, 1947</p>
+      <p><b>Author: </b>Anne Frank</p>
+      <p><b>Description: </b>The Diary of a Young Girl is the personal diary of Anne Frank, a Jewish teenager who hid with her family during the Holocaust in World War II. Through her diary entries, Anne shares her thoughts, dreams, fears, and daily experiences while living in hiding, offering a powerful and personal perspective on the impact of war, discrimination, and hope.</p>
+      <p><b>Lesson of the book: </b>The main lesson of The Diary of a Young Girl is that hope, courage, and kindness can endure even during the darkest times. It teaches the importance of standing against hatred and discrimination while valuing freedom, compassion, and human dignity.</p>
+      
+
+
+    </div>
+
+  </div>
+  <div id="popup10" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup10()"&times;></span>
+    
+      <img src="Pictures/donquixote.jpg" alt="Don Quixote" class="popup-img">
+      <h2>Don Quixote</h2>
+      <p><b>Genre:</b>Novel,Adventure,Satire,Classic</p>
+      <p><b>Release Date:</b>January 16,1605</p>
+      <p><b>Author: </b>Miguel de Cervantes</p>
+      <p><b>Description: </b>Don Quixote tells the story of Alonso Quixano, a man who becomes obsessed with tales of chivalry and decides to become a knight under the name Don Quixote. Accompanied by his loyal squire, Sancho Panza, he sets out on a series of adventures, often confusing imagination with reality. The novel humorously explores ideals, dreams, and the human condition</p>
+      <p><b>Lesson of the book: </b>The main lesson of Don Quixote is that dreams and ideals can inspire people, but wisdom and a clear understanding of reality are equally important. It also teaches the value of perseverance, friendship, compassion, and balancing imagination with reason</p>
+      
+
+
+    </div>
+
+  </div>
+
+
+  
+ 
+
+ 
+
+
+
+  
+     
+  
+
+    
+    
+         
+    
+  
+   
+
+
+
+<h2 id="national">Top 10 Filipino Books</h2>
+
+
+
+
+<section class="book-container">
+
+<div class="book">
+
+    
+    <img src="Pictures/nolo (1).jpg" alt="Noli Me Tangere" width="200" onclick="openPopup11()">
+    
+
+    <h3>Noli Me Tangere</h3>
+     
+  </div>
+
+<div class="book">
+
+    
+    <img src="Pictures/elfe (1).jpg" alt="El Filibusterismo" width="200" onclick="openPopup12()">
+    
+
+    <h3>El Filibusterismo</h3>
+     
+  </div>
+
+<div class="book">
+
+    
+    <img src="Pictures/flo (1).jpg" alt="Florante At Laura" width="200" onclick="openPopup13()">
+    
+
+    <h3>Florante At Laura</h3>
+     
+  </div>
+
+  <div class="book">
+
+    
+    <img src="Pictures/birdie (1).jpg" alt="Ibong Adarna" width="200" height="200" onclick="openPopup14()">
+    
+
+    <h3>Ibong Adarna</h3>
+     
+  </div>
+
+  <div class="book">
+
+    
+    <img src="Pictures/divil.jpg" alt="Paboritong Libro ni Hudas" width="200" onclick="openPopup15()">
+    
+
+    <h3>Paboritong Libro ni Hudas</h3>
+    
+  </div>
+
+  <div class="book">
+
+    
+    <img src="Pictures/jg (1).jpg" alt="Ang Alamat ng Gubat" width="200" onclick="openPopup16()">
+    
+
+    <h3>Ang Alamat ng Gubat</h3>
+     
+  </div>
+
+    <div class="book">
+
+    
+    <img src="Pictures/alinam (1).jpg" alt="Manila Noir" width="200" onclick="openPopup17()">
+    
+
+    <h3>Manila Noir</h3>
+     
+  </div>
+
+   <div class="book">
+
+    
+    <img src="Pictures/babae (1).jpg" alt="Misteryosang Babae" width="200" onclick="openPopup18()">
+    
+
+    <h3>Misteryosang Babae</h3>
+     
+  </div>
+<div class="pic9">
+
+    
+    <img src="Pictures/sosa (1).jpg" alt="Ang Mga Kaibigan ni Mama Susan" width="200" onclick="openPopup19()">
+    
+
+    <h3>Ang Mga Kaibigan ni Mama Susan</h3>
+     
+  </div>
+
+<div class="pic10">
+
+    
+    <img src="Pictures/diwa (1).jpg" alt="Ang Walong Diwata ng Pagkahulog" width="200" onclick="openPopup20()">
+    
+
+    <h3>Ang Walong Diwata ng Pagkahulog</h3>
+     
+  </div>
+
+</section>
+
+
+<div id="popup11" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()"&times;></span>
+      <img src="Pictures/nolo (1).jpg" alt="Noli Me Tangere" class="popup-img">
+      <h2>Noli Me Tanngere</h2>
+      <p><b>Genre:</b>Historical Fiction, Political Fiction, Social Realism, Satire</p>
+      <p><b>Release Date:</b>March 21,1887</p>
+      <p><b>Author: </b>Jose Rizal</p>
+      <p><b>Description: </b>Noli Me Tángere is a historical and political novel that follows Crisóstomo Ibarra, a young Filipino who returns home after studying in Europe. Hoping to improve his community through education and peaceful reform, he instead encounters corruption, injustice, and abuse of power during the Spanish colonial period. The novel exposes the social issues faced by Filipinos and inspires national awareness and reform.</p>
+      <p><b>Lesson of the book: </b>The main lesson of Noli Me Tángere is that justice, education, courage, and love for one's country are essential in overcoming oppression and creating a better society. It also teaches that remaining silent in the face of injustice allows it to continue.</p>
+      
+
+
+    </div>
+
+  </div>
+  <div id="popup12" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup12()"&times;></span>
+      <img src="Pictures/elfe (1).jpg" alt="El Filibusterismo" class="popup-img">
+      <h2>El Filibusterismo</h2>
+      <p><b>Genre:</b>Historical Fiction, Politcal Fiction,Social Realism, Satire</p>
+      <p><b>Author: </b>Jose Rizal</p>
+      <p><b>Release Date:</b>September 18,1891</p>
+      <p><b>Description: </b>El Filibusterismo is the sequel to Noli Me Tángere. It follows Crisóstomo Ibarra, who returns as the wealthy jeweler Simoun, seeking revenge against the corrupt Spanish colonial government. Through its darker tone, the novel explores oppression, corruption, revolution, and the struggle for justice and freedom</p>
+      <p><b>Lesson of the book: </b>The main lesson of El Filibusterismo is that injustice and abuse of power can lead to anger and violence, but lasting change requires wisdom, integrity, unity, and genuine concern for the common good.</p>
+    
+
+
+    </div>
+
+  </div>
+
+  <div id="popup13" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup13()"&times;></span>
+      <img src="Pictures/flo (1).jpg" alt="Florante at Laura" class="popup-img">
+      <h2>Florante at Laura</h2>
+      <p><b>Genre:</b>Epic Poetry,Metrical Romance,Historical Allegory,Romance</p>
+      <p><b>Author: </b>Francisco Balagtas</p>
+      <p><b>Release Date:</b>No Specific Month and Day, 1838</p>
+      <p><b>Description: </b>Florante at Laura is an epic poem that tells the story of Florante, a noble warrior from Albania, who endures betrayal, imprisonment, and hardship before reuniting with his beloved Laura. Through its themes of love, heroism, and justice, the poem also symbolizes the social and political conditions of the Philippines during the Spanish colonial period</p>
+      <p><b>Lesson of the book: </b>The main lesson of Florante at Laura is that love, loyalty, courage, and forgiveness overcome hatred, betrayal, and injustice. It also teaches that goodness and justice will ultimately triumph over evil.</p>
+    
+
+
+    </div>
+
+  </div>
+
+  <div id="popup14" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup14()"&times;></span>
+      <img src="Pictures/birdie (1).jpg" alt="Ibong Adarna" class="popup-img">
+      <h2>Ibong Adarna</h2>
+      <p><b>Genre:</b>Corrido,Epic Romance,Fantasy, Adventure</p>
+      <p><b>Author: </b>Jose De la Cruz</p>
+      <p><b>Release Date:</b>1861</p>
+      <p><b>Description: </b>Ibong Adarna is a classic Filipino corrido that tells the story of the magical Adarna bird, whose enchanting songs can heal illnesses and whose beauty captivates everyone who hears it. The story follows the three princes—Don Pedro, Don Diego, and Don Juan—as they embark on a dangerous journey to capture the bird and cure their sick father, King Fernando.</p>
+      <p><b>Lesson of the book: </b>The main lesson of Ibong Adarna is that kindness, honesty, perseverance, and humility are rewarded, while jealousy, greed, and betrayal bring suffering. It also teaches the importance of forgiveness, family, and making wise decisions</p>
+    
+
+
+    </div>
+
+  </div>
+
+  <div id="popup15" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup15()"&times;></span>
+      <img src="Pictures/divil.jpg" alt="Ang Paboritong Libro ni Hudas" class="popup-img">
+      <h2>Ang Paboritong Libro ni Hudas</h2>
+      <p><b>Genre:</b>Humor,Satire,Essays, Nonfiction</p>
+      <p><b>Author: </b>Bob Ong</p>
+      <p><b>Release Date:</b>2000</p>
+      <p><b>Description: </b>Ang Paboritong Libro ni Hudas is a humorous and thought-provoking collection of essays that reflects on everyday Filipino life, school experiences, relationships, and society. Through wit and simple storytelling, Bob Ong shares meaningful insights about life while encouraging readers to laugh, think, and reflect.</p>
+      <p><b>Lesson of the book: </b>The main lesson of Ang Paboritong Libro ni Hudas is that life's experiences, whether joyful or difficult, can teach valuable lessons. It encourages readers to think critically, stay humble, appreciate everyday moments, and face life's challenges with humor and optimism.</p>
+    
+
+
+    </div>
+
+  </div>
+<div id="popup16" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup16()"&times;></span>
+      <img src="Pictures/jg (1).jpg" alt="Ang Alamat ng Gubat" class="popup-img">
+      <h2>Ang Alamat ng Gubat</h2>
+      <p><b>Genre:</b>Fantasy, Satire, Adventure, Allegorical Fiction</p>
+      <p><b>Author: </b>Bob Ong</p>
+      <p><b>Release Date:</b>2003</p>
+      <p><b>Description: </b>Ang Alamat ng Gubat is a satirical fantasy novel that follows Tong, a young crab, on a journey through a mysterious forest to find a cure for his sick father. Along the way, he encounters different animals that symbolize the flaws and problems of society, such as greed, corruption, dishonesty, and abuse of power.</p>
+      <p><b>Lesson of the book: </b>The main lesson of Ang Alamat ng Gubat is that honesty, courage, and integrity are essential in overcoming injustice and corruption. It also teaches readers to think critically, value truth, and stand up for what is right</p>
+    
+
+
+    </div>
+
+  </div>
+
+  <div id="popup17" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup17()"&times;></span>
+      <img src="Pictures/alinam (1).jpg" alt="Manila Noir" class="popup-img">
+      <h2>Manila Noir</h2>
+      <p><b>Genre:</b>Noir Fiction, Crime Fiction, Mystery, Anthology</p>
+      <p><b>Author: </b>Jessica Hagerdon</p>
+      <p><b>Release Date:</b>November 2,2010</p>
+      <p><b>Description: </b>Manila Noir is a collection of crime and noir stories set in Metro Manila. Through different characters and perspectives, the anthology explores the city's darker side, including crime, corruption, poverty, violence, and the moral struggles people face in their daily lives</p>
+      <p><b>Lesson of the book: </b>The main lesson of Manila Noir is that every choice has consequences and that integrity and compassion are important even in difficult circumstances. It also encourages readers to reflect on social issues, justice, and the realities of urban life</p>
+    
+
+
+    </div>
+
+  </div>
+
+  <div id="popup18" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup18()"&times;></span>
+      <img src="Pictures/babae (1).jpg" alt="Misteryosang Babae" class="popup-img">
+      <h2>Misteryosang Babae</h2>
+      <p><b>Genre:</b>Mystery,Psychological Fiction, Contemporary Fiction, Suspense</p>
+      <p><b>Author: </b>Edgar Calabia Samar</p>
+      <p><b>Release Date:</b>2018</p>
+      <p><b>Description: </b>Misteryosang Babae is a mystery novel that follows characters searching for the truth behind a mysterious woman. As secrets unfold, the story explores themes of memory, identity, love, and the impact of past choices, blending suspense with psychological depth.</p>
+      <p><b>Lesson of the book: </b>The main lesson of Misteryosang Babae is that truth, honesty, and self-acceptance are essential for understanding ourselves and others. It also teaches that facing the past is necessary for healing and personal growth.</p>
+    
+
+
+    </div>
+
+  </div>
+  <div id="popup19" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup19()"&times;></span>
+      <img src="Pictures/sosa (1).jpg" alt="Ang Mga Kaibigan ni Mama Susan" class="popup-img">
+      <h2>Ang Mga Kaibiganni Mama Susan</h2>
+      <p><b>Genre:</b>Horror, Mystery, Suspense, Psychological Fiction</p>
+      <p><b>Author: </b>Bob Ong</p>
+      <p><b>Release Date:</b>2010</p>
+      <p><b>Description: </b>Ang mga Kaibigan ni Mama Susan is a horror novel that follows Galo, a college student who returns to his grandmother's hometown to care for her. As strange and terrifying events unfold, he uncovers dark secrets involving Mama Susan and a mysterious cult. The story blends psychological horror with suspense, keeping readers questioning what is real until the end.</p>
+      <p><b>Lesson of the book: </b>The main lesson of Ang mga Kaibigan ni Mama Susan is that courage, critical thinking, and wisdom are essential when facing fear and uncertainty. It also reminds readers to be cautious of blind faith, manipulation, and the consequences of ignoring the truth.</p>
+    
+
+
+    </div>
+
+  </div>
+  <div id="popup20" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup20()"&times;></span>
+      <img src="Pictures/diwa (1).jpg" alt="Ang Walong Diwata ng Pagkahulog" class="popup-img">
+      <h2>Ang Walong Diwata ng Pagkahulog</h2>
+      <p><b>Genre:</b>Fantasy, Psychological Fiction, Magical Realism, Contemporary Fiction</p>
+      <p><b>Author: </b>Edgar Calabia Samar</p>
+      <p><b>Release Date:</b>2008</p>
+      <p><b>Description: </b>Walong Diwata ng Pagkahulog is a fantasy novel that follows Karl Daniel as he embarks on a journey of self-discovery through a world where reality, dreams, and mythology intertwine. Along the way, he encounters magical beings and symbolic experiences that shape his understanding of identity, memory, love, and loss.</p>
+      <p><b>Lesson of the book: </b>The main lesson of Walong Diwata ng Pagkahulog is that personal growth comes from accepting the past, embracing change, and discovering one's true identity. It also teaches the importance of resilience, self-reflection, and finding meaning in life's experiences.</p>
+    
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+    <div class="row">
+        <ul class="list-unstyled col-4 col-xs-6 col-sm-6 col-md-4 col-lg-4">
+            <li><a class="nav-link page" href="#">Home</a></li>
+            <li><a href="pages/books.html" class="nav-link page">Books</a></li>
+            <li><a href="/pages/Authors/Author.html" class="nav-link page">Authors</a></li>
+            <li><a class="nav-link page" href="pages/Libraries.html">Libraries</a></li>
+            <li><a class="nav-link page" href="/pages/Sites.html">Reading Sites</a></li>
+            <li><a href="/pages/Trivia.html" class="nav-link page">Trivia</a></li>
+            <li><a href="/pages/Feedback.html" class="nav-link page">Feedback</a></li>
+        </ul>
+        <ul class="list-unstyled col-4 col-xs-6 col-sm-6 col-md-4 col-lg-4">&copy; <b>Credits</b>
+            <li>IPMX CINEMATIC</li>
+            <li>GEMINI</li>
+            <li>Meta ai</li>
+            <li>BOOKBUB</li>
+            <li>Wikipedia</li>
+            <li>World Atlas</li>
+            <li>Current World Archaeology</li>
+        </ul>
+        <ul class="list-unstyled col-4 col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <li><img src="Pictures/camhi logo.png" alt="CAMHI" width="130px" class="my-4"></li>
+            <li>CAMARINES SUR NATIONAL HIGH SCHOOL</li>
+            <li>Created By: Group6</li>
+            <li>12-Prog1</li>
+        </ul>
+    </div>
+    <p>&copy; <b>2026 Reading Gallery. All Rights Reserved.</b></p>
+</footer>
+    <script src="Styles/yez (1).js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('.site').forEach(function (card) {
+            // "locked" means the person explicitly clicked/tapped to pin the
+            // card open (or closed). While locked, hovering in and out no
+            // longer changes the expanded state, so "Show less" always works
+            // even if the cursor is still sitting over the card.
+            var locked = false;
+
+            function setExpanded(state) {
+                card.classList.toggle('is-expanded', state);
+                card.setAttribute('aria-expanded', state);
+            }
+
+            card.addEventListener('mouseenter', function () {
+                if (!locked) setExpanded(true);
+            });
+
+            card.addEventListener('mouseleave', function () {
+                if (!locked) setExpanded(false);
+            });
+
+            card.addEventListener('click', function (e) {
+                if (e.target.closest('a')) return; // let real links navigate
+                locked = !locked;
+                setExpanded(locked);
+            });
+
+            card.addEventListener('keydown', function (e) {
+                if (e.target.closest('a')) return;
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    locked = !locked;
+                    setExpanded(locked);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

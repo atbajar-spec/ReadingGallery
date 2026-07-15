@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous libraries</title>
+    <link rel="stylesheet" href="Styles/Homepage.css">
+    <link rel="stylesheet" href="Styles/bootstrap.min (1).css">
+    <link rel="icon" href="Pictures/sadetnalogo (2).png" type="image/png">
+
+    <style>
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+        .navlist{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 8px; 
+            margin: auto;
+            text-align: justify;
+            width: fit-content;
+            font-family: monospace;
+        }
+        /* header{
+            height: 15vh;
+        }   
+
+        
+        @media (max-width: 768px){
+            header{
+                height: 17vh;
+            }
+        } */
+        .devdev{
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: clamp(1rem, 3vw, 2rem);
+            align-items: stretch;
+        }
+        .devdev>.national, .devdev>.international{
+            background-color: white;
+            padding: clamp(1rem, 3vw, 1.75rem);
+            border-radius: 25px;
+            border: #6D4C41 solid 5px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .devdev h1{
+            color: #6D4C41;
+            text-shadow: none;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 1rem + 1.5vw, 2rem);
+            margin-bottom: 1.5rem;
+        }
+        .national ol, .international ol{
+            color: black;
+            font-size: clamp(0.9rem, 0.8rem + 0.4vw, 1.15rem);
+            padding-left: 1.25rem;
+            margin: 0;
+        }
+        .national ol li, .international ol li{
+            margin-bottom: 0.6rem;
+            line-height: 1.4;
+        }
+        .national>ol>li>a, .international>ol>li>a{
+            color: #6D4C41;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .national>ol>li>a:hover, .international>ol>li>a:hover,
+        .national>ol>li>a:focus-visible, .international>ol>li>a:focus-visible{
+            text-decoration: underline;
+        }
+        /* Make sure jumping to an anchor doesn't land content under a sticky/fixed header */
+        main [id], section[id]{
+            scroll-margin-top: 200px;
+        }
+        @media (max-width: 768px){
+            .devdev{
+                grid-template-columns: 1fr;
+            }
+            .LibraryName{
+                font-size: 2.2rem;   /* Bigger on mobile */
+            }
+
+            .LibraryInformation{
+                font-size: 1.1rem;   /* Slightly bigger if you want */
+            }
+        }
+
+
+        .navlist li{
+            font-size: clamp(15px, 20px, 25px);
+            
+        }
+        .nav-link{
+            color: #6D4C41;
+        }
+        .intro{
+            border: white solid 2px;
+        }
+        .intro h1{
+            color: white;
+        }
+        #nationally, #internationally{
+            color: white;
+            border-left: white solid 3px;
+            text-align: justify;
+            padding-left: 2%;
+
+        }
+        .LibraryName {
+            text-align: start;
+            border-left: #6D4C41 solid 3px;
+            padding-left: 2%;
+            font-size: 1.8rem;
+        
+        }
+        .LibraryInformation{
+            text-align: justify;
+            font-size: 1rem;
+            color: #6D4C41;
+        }
+        .libraryimg{
+            border-radius: 25px;
+            width: 100%;
+            height: auto;
+            max-width: clamp(220px, 10rem + 15vw, 420px);
+            flex-shrink: 0;
+        }
+        .link{
+            text-decoration: underline;
+            color: rgb(150, 135, 107);
+            font-style: italic;
+        }
+        .link:hover{
+            color: aqua;
+        }
+        .navbar-toggler {
+            border-color: white;
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+        .page{
+            font-size: 1.2rem;
+        }
+        .librarycard{
+            background-color: #FFF;
+            border: #6D4C41 solid 3px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="try.html"><img src="Pictures/sadetnalogo (2).png" alt="" width="60px" style="display: inline-block; margin-right: 10px;">Reading Gallery</a>
+
+        <!-- Hamburger -->
+        <button class="navbar-toggler ms-auto"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link page" href="try.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="books.html" class="nav-link page">Books</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Author (1).html" class="nav-link page">Authors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page" href="Libraries.html" id="current">Libraries</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page" href="Sites.html">Reading Sites</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Trivia.html" class="nav-link page">Trivia</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Feedback (2).html" class="nav-link page">Feedback</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+</header>
+
+    <section class="intro">
+        <h1>Famous Libraries</h1>
+        <p>The Famous Libraries from the Philippines and Other Countries.</p>
+    </section>
+
+    <section id="summarryOfContents">
+        <h1 class="text-white pb-3 ">Contents of the webpage:</h1>
+        <div class="devdev">
+            <div class="national">               
+                <h1>National Libraries</h1>
+                    <ol>
+                        <li><a href="#NationalLibrary">National Library of the Philippines</a></li>
+                        <li><a href="#AurelioMontinola">Aurelio Montinola, Jr. Library</a></li>
+                        <li><a href="#QuezonLibrary">Quezon City Public Library</a></li>
+                        <li><a href="#FilipinasLibrary">Filipinas Heritage Library</a></li>
+                        <li><a href="#MiguelLibrary">Miguel de Benavides Library</a></li>
+                        <li><a href="#CebuLibrary">Cebu City Public Library</a></li>
+                        <li><a href="#RizalLibrary">Rizal Library</a></li>
+                        <li><a href="#OrtigasLibrary">Ortigas Foundation Library</a></li>
+                        <li><a href="#goatlibrary">Goethe Institut Philippinen</a></li>
+                        <li><a href="#2000">Reading Club 2000</a></li>
+                    </ol>
+            </div>
+
+            <div class="international">
+                <h1>International Libraries</h1>
+                    <ol>
+                        <li><a href="#CongressLibrary">Library of Congress</a></li>
+                        <li><a href="#yaleLibrary">Yale University Beinecke Rare Book and Manuscript Library</a></li>
+                        <li><a href="#bodylibrary">Bodleian Library</a></li>
+                        <li><a href="#vaticanbruh">Vatican Library</a></li>
+                        <li><a href="#canada">Library of Parliament</a></li>
+                        <li><a href="#nein">Austrian National Library</a></li>
+                        <li><a href="#morgan">The Morgan Library & Museum </a></li>
+                        <li><a href="#gatas">Melk Monastery Library</a></li>
+                        <li><a href="#chantily">Château de Chantilly Library</a></li>
+                        <li><a href="#stakhom">Stockholm Public Library</a></li>
+                    </ol>
+            </div>
+        </div>
+    </section>
+
+    <main class="MainContent">
+        <section class="Nationally">
+            <h1 id="nationally">Nationally</h1>
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" >
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/National_Library_of_the_Philippines_Main_Entrance.jpg" 
+                    alt="National Library of the Philippines" class="img-fluid libraryimg">
+                        <div>
+                            <h2 class="LibraryName" id="NationalLibrary">National Library of the Philippines, Manila City</h2>
+                            <p class="LibraryInformation">
+                                The National Library of the Philippines (NLP; Filipino: Pambansang Aklatan ng Pilipinas) serves as 
+                                the country's principal repository of cultural heritage and literary resources. 
+                                It is located in the district of Ermita in Manila, near the National Museum of Natural History 
+                                and the National Historical Commission of the Philippines. The library is under the jurisdiction 
+                                of the 
+                                National Commission for Culture and the Arts (NCCA).
+                                The library houses the original manuscripts of José Rizal's Noli Me Tángere, 
+                                El filibusterismo, and Mi último adiós.
+                            </p>
+                        </div>
+                </div>
+            </section>
+
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" >
+                    <img src="https://static.tripzilla.ph/media/97925/conversions/186050_800x-w768.webp" 
+                    alt="Aurelio Montinola, Jr. Library" class="img-fluid libraryimg">
+                    <div id="AurelioMontinola">
+                        <h2 class="LibraryName">Aurelio Montinola, Jr. Library, Makati City</h2>
+                        <p class="LibraryInformation">
+                            The Alliance Française de Manille (AFM) was founded in 1920 and is one of the 
+                            most prominent foreign cultural institutions in the Philippines. A non-profit 
+                            organization committed to promoting the French language and culture, AFM encourages 
+                            friendly relations between the Filipinos and the French through art and educational
+                            programs.
+                        </p>
+                        <p class="LibraryInformation">
+                            Image and description from: <i><a href="https://www.alliance.ph/about-us/history/#/" target="_blank" class="link">Alliance Francaise Official Website</a></i>
+                        </p>
+                    </div>    
+                </div>  
+            </section>
+
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="QuezonLibrary">
+                <img src="https://qcpl.sparksoft-apps.com:8888/uploads/qcpl_smaller_337a351541.jpg" 
+                alt="Quezon City Public Library" 
+                class="img-fluid libraryimg">
+                    <div id="library3">
+                        <h2 class="LibraryName">Quezon City Public Library, Quezon City</h2>
+                        <p class="LibraryInformation">
+                            The Quezon City Public Library was established on August 16, 1948, 
+                            and opened to the public on October 23, 1948. Initially, the library 
+                            was housed in a one-story building near the old Post Office and behind 
+                            the former Quezon City Hall, in an area then known as Highway 54, now 
+                            called Epifanio de los Santos Avenue (EDSA). Over the years, the location 
+                            of the Main Library changed several times. Eventually, it moved to a
+                            modern three-story building located within the Quezon City Hall Compound 
+                            and was officially opened to the public on February 6, 2017.
+                        </p>
+                        <p class="LibraryInformation">
+                            Image and description from: <i><a href="https://qcpl.quezoncity.gov.ph/about" target="_blank" class="link">Quezon City Public Library official site</a></i>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="FilipinasLibrary">
+                <img src="https://www.ayalatriangle.com/sites/ayalatriangle.com/files/styles/640x429/public/images/filipinas-heritage-library.jpg?itok=PvrFAX_g" 
+                alt="Filipinas Heritage Library" 
+                class="img-fluid libraryimg">
+                        <div id="library4">
+                            <h2 class="LibraryName">Filipinas Heritage Library, Makati City</h2>
+                            <p class="LibraryInformation">
+                                Established in 1996, the Filipinas Heritage Library (FHL) is the other half of Ayala Foundation’s Arts and Culture Division. 
+                                As a one-stop digital research center on the Philippines, its mission is to spark and stoke interest in the visual, aural, and printed story of the Filipino.
+                                We collaborate with individuals and institutions in preserving documentary heritage with a focus on the formative period of Philippine nationhood 
+                                (1930-1950s). Our Filipiniana collections are shared with the public onsite (on the sixth floor 
+                                of the Ayala Museum complex), virtually (through our online public access catalogue), and through 
+                                public programs (exhibitions, lectures, and educational activities).
+                            </p>
+                            <p class="LibraryInformation">Description from <a href="https://www.filipinaslibrary.org.ph/about-us/" target="_blank" class="link">Filipinas Library Website</a></p>
+                        </div>
+                </div>
+            </section>
+
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="MiguelLibrary">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/MigueldeBenavidesLibraryjf0474_04.JPG/1920px-MigueldeBenavidesLibraryjf0474_04.JPG?_=20240930163512"  
+                    alt="Miguel de Benavides Library" class="img-fluid libraryimg">
+                        <div id="library5">
+                            <h2 class="LibraryName">Miguel de Benavides Library, Manila</h2>
+                            <p class="LibraryInformation">
+                                The Miguel de Benavides Library, also known as the University of Santo Tomas Library, 
+                                is the main academic library of the University of Santo Tomas. The library has been in 
+                                continuous service and its collection antedates the existence of the university itself.
+                            </p>
+                            <p class="LibraryInformation">Description and Image from: <a href="https://en.wikipedia.org/wiki/Miguel_de_Benavides_Library" target="_blank" class="link">Wikipedia</a></p>
+                        </div>
+                </div>
+            </section>
+
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="CebuLibrary">
+                <img src="https://www.rappler.com/tachyon/2025/07/CEBU-CITY-PUBLIC-LIBRARY.jpg?resize=1080%2C810&zoom=1" 
+                alt="Cebu City Public Library" 
+                class="img-fluid libraryimg">
+                    <div id="library6">
+                        <h2 class="LibraryName">Cebu City Public Library, Cebu City</h2>
+                        <p class="LibraryInformation">
+                            The Cebu City Public Library and Information Center traces its roots to the Cebu Branch 
+                            Library of the Philippine Library and Museum, now the National Library of the Philippines. 
+                            It was organized and opened to the public on April 13, 1919, by Guillermo Restun, the chief 
+                            librarian from the Ilo-ilo branch. The province of Cebu took charge of the initial collection 
+                            and other maintenance and operating expenses. Since its establishment, the public library has 
+                            been housed in many different buildings, until in 1938, a dedicated edifice, the Rizal Memorial 
+                            Library and Museum, was inaugurated.
+                        </p>
+                        <p class="LibraryInformation">Description from: <a href="https://en.wikipedia.org/wiki/Cebu_City_Public_Library" target="_blank" class="link">Wikipedia</a>
+                        <br>Image from: <a href="https://www.rappler.com/philippines/cebu-city-reopens-public-library-june-2025/" target="_blank" class="link">Rappler</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="RizalLibrary">
+                <img src="https://theguidon.com/1112/main/wp-content/uploads/2025/04/021125-Rizal-Library-undergoes-administrative-revisions-Ingel-1-1-scaled-1400x934.jpg" 
+                alt="Rizal Library" 
+                class="img-fluid libraryimg">
+                    <div id="library7">
+                        <h2 class="LibraryName">Rizal Library, Manila</h2>
+                        <p class="LibraryInformation">
+                            The Rizal Library at Ateneo de Manila University is the main library for undergraduate students. 
+                            It has a large collection of resources including books, periodicals, newspapers, databases and special 
+                            collections. Some notable special collections include the American Historical Collection about the American 
+                            experience in the Philippines, the Ateneo Library of Women's Writings, and the Pardo de Tavera Collection about 
+                            Philippine history and prominent figures. For undergraduate students from other schools to access the library, 
+                            they need a valid student ID, referral letter, and must pay a fee depending on the day and time of their visit. 
+                            They also have dress code requirements.
+                        </p>
+                        <p class="LibraryInformation">
+                                Description from: <a href="https://www.scribd.com/presentation/93381061/Rizal-Library" target="_blank" class="link"> Scribd</a> 
+                            <br>Image from: <a href="https://theguidon.com/2025/04/rizal-library-revises-internal-systems-in-anticipation-of-new-director-in-2026/" target="_blank" class="link">The GUIDON</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="OrtigasLibrary">
+                <img src="https://www.ortigasfoundationlibrary.com.ph/sites/default/files/2021-06/Mask%20Group%2077_1.png" alt="Ortigas Foundation Library" 
+                class="img-fluid libraryimg">
+                    <div id="library8">
+                        <h2 class="LibraryName">Ortigas Foundation Library, Pasig City</h2>
+                        <p class="LibraryInformation">
+                            The Ortigas Foundation, established on November 7, 1996, promotes the study and preservation of Philippine history, 
+                            art, and culture. Its library houses a valuable collection of historical books, periodicals, and photographs, 
+                            providing researchers with access to well-preserved materials and professional assistance. The foundation also 
+                            hosts seminars, conferences, exhibitions, and other educational events to support Philippine studies and encourage 
+                            learning within the academic and business communities.
+                        </p>
+                        <p class="LibraryInformation">
+                            Description(Summarized) and Image from: <a href="https://www.ortigasfoundationlibrary.com.ph/about-us" target="_blank" class="link">Ortigas Foundation Library Website</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="goatlibrary">
+                <img src="https://static.tripzilla.ph/media/97957/conversions/186052_800x-w768.webp" alt="Goethe Institut Philippinen" 
+                class="img-fluid libraryimg">
+                    <div id="library9">
+                        <h2 class="LibraryName">Goethe Institut Philippinen, Makati City</h2>
+                        <p class="LibraryInformation">
+                            The Goethe Institut Philippinen language and culture studies institution houses a multimedia 
+                            library about the German language. Much like other foreign language schools, it aims to encourage 
+                            and promote international cultural exchange among Filipinos. To achieve this, they provide language 
+                            courses and reference materials that aid in better understanding the German vernacular and culture. 
+                            Its library collection consists of books, magazines, film, and music — allowing you to experience 
+                            different ways of learning!
+                        </p>
+                        <p class="LibraryInformation">
+                            Image and Info from: <a href="https://www.tripzilla.ph/best-libraries-in-the-philippines/9061" target="_blank" class="link">Tripzilla</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="librarycard">
+               <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="2000">
+                <img src="https://static.tripzilla.ph/media/97936/conversions/186056_800x-w768.webp" alt="Reading Club 2000" 
+                class="img-fluid libraryimg">
+                    <div id="library3">
+                        <h2 class="LibraryName">Reading Club 2000, Makati City</h2>
+                        <p class="LibraryInformation">
+                            On the outskirts of the Makati City CBD sits the Reading Club 2000. It is a free-for-all library which Hernando 
+                            “Nanie” Guanlao set up just outside of his ancestral home. The idea is to let anyone freely borrow and return or 
+                            keep books from its collection. According to Nanie, he hopes to encourage the local community to take part in his 
+                            passion for books and reading. Here at the Reading Club 2000, there’s no requirement for memberships, library cards, 
+                            or IDs. Everyone is welcome to indulge in a good book!
+                        </p>
+                        <p class="LibraryInformation">
+                            Image and Info from: <a href="https://www.tripzilla.ph/best-libraries-in-the-philippines/9061" target="_blank" class="link">Tripzilla</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="Internationally">
+            <h1 id="internationally">Internationally</h1>
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="CongressLibrary">
+                <img src="https://res.cloudinary.com/highereducation/image/upload/v1533591754/TheBestColleges.org/1-library-of-congress.jpg" 
+                alt="" class="img-fluid libraryimg">
+                    <div id="library1">
+                        <h2 class="LibraryName">Library of Congress — Washington D.C., USA</h2>
+                        <p class="LibraryInformation">
+                                The Library of Congress in Washington DC is essentially both the national library of the U.S. 
+                                and the country's oldest federal cultural institution. Though it consists of only three buildings,
+                                it is the largest library in the world for shelf space and number of volumes. While open to the 
+                                public for on-site research and as a tourist attraction, as the research institution of Congress, 
+                                only members of Congress, Supreme Court justices, and other specified government officials can check 
+                                out books. The library is formally known as the "library of last resort" in the U.S., charged with 
+                                making certain items available to other national libraries if all other means have been exhausted. 
+                                The library's holdings are vast, including more than 32 million books, more than 61 million 
+                                manuscripts, a rough draft of the Declaration of Independence, one of only four perfect vellum copies 
+                                of the Gutenberg Bible in the world, over one million newspapers from the last three centuries, over 
+                                five million maps, six million pieces of sheet music, and more than 14 millions photos and prints.
+                        </p>
+                        <p class="LibraryInformation">Image and Description from: <a href="https://www.thebestcolleges.org/amazing-libraries/" target="_blank" class="link">The Best Colleges website</a></p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="yaleLibrary">
+                <img src="https://res.cloudinary.com/highereducation/image/upload/v1533591754/TheBestColleges.org/4-yale-beinecke.jpg" 
+                alt="Yale University Beinecke Rare Book and Manuscript Library" class="img-fluid libraryimg">
+                    <div id="library2">
+                        <h2 class="LibraryName">Yale University Beinecke Rare Book and Manuscript Library — New Haven, Connecticut, USA</h2>
+                        <p class="LibraryInformation">
+                            The Yale University Beinecke Rare Book and Manuscript Library holds 
+                            the distinction of being the largest building in the world that serves 
+                            the express purpose of preserving rare books and manuscripts, which alone 
+                            undoubtedly makes it one of the best libraries in the world. The library's 
+                            impressive holdings celebrate significant authors like Rudyard Kipling, 
+                            D.H. Lawrence, Sinclair Lewis, and Joseph Conrad through its special collections. 
+                            Beinecke's central shelving area includes glass walls and soft lighting to protect 
+                            the works from direct light. Accessible to the public as a tourist attraction, the 
+                            library's exhibition hall displays many of the library's rare works, including one 
+                            of only 48 copies in existence of a treasured Gutenberg Bible.
+                        </p>
+                     <p class="LibraryInformation">Image and Description from: <a href="https://www.thebestcolleges.org/amazing-libraries/" target="_blank" class="link">The Best Colleges website</a></p>
+                    </div>
+                </div>  
+            </section>
+
+            <section class="librarycard">
+               <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="bodylibrary">
+                    <img src="https://res.cloudinary.com/highereducation/image/upload/v1533591754/TheBestColleges.org/2-bodleian-library.jpg" 
+                    alt="Bodleian Library" class="img-fluid libraryimg">
+                        <div id="library3">
+                            <h2 class="LibraryName">Bodleian Library — Oxford, United Kingdom</h2>
+                            <p class="LibraryInformation">
+                            Established in 1602 as Oxford University's library, Bodleian is one of the oldest libraries 
+                            in Europe. The library houses more than 11 million items, including many of historical 
+                            importance: four copies of the Magna Carta, a Gutenberg Bible, and Shakespeare's First Folio 
+                            (from 1623), just to name a few. Though Bodleian comprises multiple buildings, perhaps the 
+                            most visually interesting is Radcliffe Camera, built in 1737-1749 to house the Radcliffe 
+                            Science Library. The earliest circular library in England, Radcliffe has outlasted its 15 
+                            minutes of fame by appearing in multiple films, including Young Sherlock Holmes, The Saint, 
+                            The Red Violin, and The Golden Compass.
+                            </p>
+                            <p class="LibraryInformation">Image and Description from: <a href="https://www.thebestcolleges.org/amazing-libraries/" target="_blank" class="link">The Best Colleges website</a></p>
+                        </div>
+                </div>
+            </section>
+
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="vaticanbruh">
+                <img src="https://res.cloudinary.com/highereducation/image/upload/v1533591754/TheBestColleges.org/5-vatican-library.jpg" 
+                alt=" Vatican Library — Vatican City, Rome" class="img-fluid libraryimg">
+                    <div id="library4">
+                        <h2 class="LibraryName"> Vatican Library — Vatican City, Rome</h2>
+                        <p class="LibraryInformation">
+                        The Vatican Library, under the ecclesiastical jurisdiction of the Catholic Church in Rome, 
+                        is one of the oldest libraries in the world. Though it was formally established in 1475, 
+                        its existence in early forms dates back to the origins of the Catholic Church. For nearly 600 years, 
+                        the library has added to its collection through historic acquisitions, generous bequests, and gracious gifts. 
+                        The Vatican Library currently holds mor than 1.1 million books, 75,000 manuscripts, and over 8,500 incunabula. 
+                        Fittingly, the library owns the oldest complete manuscript of the Bible, as well as many other significant works 
+                        from medieval times.
+                        </p>
+                        <p class="LibraryInformation">Image and Description from: <a href="https://www.thebestcolleges.org/amazing-libraries/" target="_blank" class="link">The Best Colleges website</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="canada">
+                <img src="https://res.cloudinary.com/highereducation/image/upload/v1533591754/TheBestColleges.org/8-library-parliament-canada.jpg" 
+                alt="Library of Parliament" class="img-fluid libraryimg">
+                    <div id="library5">
+                        <h2 class="LibraryName">Library of Parliament — Ottawa, Canada</h2>
+                        <p class="LibraryInformation">
+                        The Library of Parliament in Ottawa, Canada holds a special distinction on our list, 
+                        as it is the only library of such prominence that its likeness is printed on the country's 
+                        currency (it is featured on Canada's ten dollar bill). The design of this national landmark 
+                        was inspired by the British Museum Reading Room, and includes walls supported by 16 flying 
+                        buttresses, a vaulted ceiling in the main reading room, and white pine paneling with beautifully 
+                        detailed carvings of flowers, masks, and mythical creatures. The collection encompasses more than 
+                        600,000 items, which is curated by a dedicated 300-member staff. While access to the facility is 
+                        generally restricted to Canadian parliamentary business, tours are often made available to the 
+                        public.
+                        </p>
+                        <p class="LibraryInformation">Image and Description from: <a href="https://www.thebestcolleges.org/amazing-libraries/" target="_blank" class="link">The Best Colleges website</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="nein">
+                <img src="https://res.cloudinary.com/highereducation/image/upload/v1533591754/TheBestColleges.org/13-austrian-national-library.jpg" 
+                alt="Austrian National Library" class="img-fluid libraryimg">
+                    <div id="library6">
+                        <h2 class="LibraryName">Austrian National Library — Vienna, Austria</h2>
+                        <p class="LibraryInformation">
+                            Much like the Library of Congress in the U.S., the Austrian National Library is 
+                            responsible for managing the collection of all publications that appear in Austria. 
+                            Works of special prominence include the world's foremost Globe collection, rare books 
+                            dating from the 4th century, a UNESCO Memory of the World Programme item 
+                            (the Vienna Dioscurides, a 6th-century illuminated manuscript exploring medicine and healing),
+                            and a map collection that dates back to the 16th century. Originally housed in the Prunksaal, 
+                            the library is currently located at Hofburg Palace and the baroque Palais Mollard-Clary, 
+                            housing 7.4 million items within its comprehensive collection.
+                        </p>
+                        <p class="LibraryInformation">Image and Description from: <a href="https://www.thebestcolleges.org/amazing-libraries/" target="_blank" class="link">The Best Colleges website</a></p>   
+                    </div>
+                </div>
+            </section>
+
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="morgan">
+                <img src="https://res.cloudinary.com/highereducation/image/upload/v1533591754/TheBestColleges.org/16-morgan-library.jpg" 
+                alt="The Morgan Library & Museum" class="img-fluid libraryimg">
+                    <div id="library7">
+                        <h2 class="LibraryName">The Morgan Library & Museum — New York, New York, USA</h2>
+                        <p class="LibraryInformation">
+                        The Morgan Library & Museum was formed in 1906 to hold the private collection of banking magnate 
+                        J.P. Morgan, including manuscripts, printed books, prints, and drawings. Items of special 
+                        prominence in Morgan's collection include illuminated and original manuscripts, works by Sir 
+                        Walter Scott and de Balzac, and drawings by masterful artists like Leonardo, Raphael, Picasso, 
+                        Michelangelo, and Rembrandt. Interestingly, Morgan was apparently also drawn to unusual 
+                        collectibles to add to his holdings, including scraps of paper written on by Bob Dylan for what 
+                        would become "Blowin' in the Wind," concept drawings for Antoine de Saint-Exupéry's The Little 
+                        Prince and a Charles Dickens manuscript of A Christmas Carol.
+                        </p>
+                        <p class="LibraryInformation">Image and Description from: <a href="https://www.thebestcolleges.org/amazing-libraries/" target="_blank" class="link">The Best Colleges website</a></p>   
+                    </div>
+                </div>
+            </section>
+
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="gatas">
+                <img src="https://res.cloudinary.com/highereducation/image/upload/v1533591754/TheBestColleges.org/20-melk-library.jpg" 
+                alt="Melk Monastery Library" class="img-fluid libraryimg">
+                    <div id="library8">
+                        <h2 class="LibraryName">Melk Monastery Library — Melk, Austria</h2>
+                        <p class="LibraryInformation">
+                            The formation in the 12th century of the Melk Monastery Library followed the founding 
+                            of Melk Abbey and school of the same name around 1089. Word spread quickly, and the Melk 
+                            Library became known as one of the largest manuscript holders in the world, also emerging 
+                            as an authority in manuscript production. Today, the library's high ceilings, adorned with 
+                            beautiful frescos painted by Paul Troger, guard what is still one of the world's biggest 
+                            library when it comes to collections of medieval manuscripts, as well as a prominent 
+                            collection of musical manuscripts.
+                        </p>
+                        <p class="LibraryInformation">Image and Description from: <a href="https://www.thebestcolleges.org/amazing-libraries/" target="_blank" class="link">The Best Colleges website</a></p>                           
+                    </div>
+                </div>
+            </section>
+            
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="chantily">
+                <img src="https://res.cloudinary.com/highereducation/image/upload/v1533591754/TheBestColleges.org/24-chateau-de-chantilly.jpg" 
+                alt="Château de Chantilly Library" class="img-fluid libraryimg">
+                    <div id="library9">
+                        <h2 class="LibraryName">Château de Chantilly Library — Chantilly, France</h2>
+                        <p class="LibraryInformation">
+                            Among few libraries in Europe to hold a prized Gutenberg Bible in its collection, the 
+                            Château de Chantilly Library is part of a French estate that also includes one of France's 
+                            most important art galleries, the Musée Condé. The main part of the estate (Grand Château) 
+                            was built in 1528-1531, with an additional annex (Petit Château) constructed in 1560. The 
+                            Grand Château was destroyed during the French Revolution and was later rebuilt from the 
+                            ground up between 1875 and 1881. The library of the estate contains more than 1,300 
+                            manuscripts and 12,500 printed works, including the aforementioned Gutenberg Bible 
+                            (one of more than 700 incunabula, a term describing early printed books, typically 
+                            before 1501,) and roughly 200 medieval manuscripts. The library is often open to the 
+                            public for guided tours.
+                        </p>
+                        <p class="LibraryInformation">Image and Description from: <a href="https://www.thebestcolleges.org/amazing-libraries/" target="_blank" class="link">The Best Colleges website</a></p>                           
+                    </div>
+                </div>
+            </section>
+
+            <section class="librarycard">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 library" id="stakhom">
+                <img src="https://res.cloudinary.com/highereducation/image/upload/v1533591754/TheBestColleges.org/32-stockholm-public-library.jpg" 
+                alt="Stockholm Public Library" class="img-fluid libraryimg">
+                    <div id="library10">
+                        <h2 class="LibraryName">Stockholm Public Library — Stockholm, Sweden</h2>
+                        <p class="LibraryInformation">
+                            The Stockholm Public Library is one of the capital city's most notable buildings. 
+                            Opened in 1928, the library was designed by Gunnar Asplund, one of the most important 
+                            figures in Modernist Swedish architecture. The main interior of the building is a rotunda, 
+                            giving visitors a pleasing view of many of the library's shelves along the curved rotunda 
+                            walls. The Stockholm Public Library holds more than two million volumes and over 2.4 million 
+                            audio visual and mixed media items.
+                        </p>
+                        <p class="LibraryInformation">Image and Description from: <a href="https://www.thebestcolleges.org/amazing-libraries/" target="_blank" class="link">The Best Colleges website</a></p>                           
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+    <div class="row">
+        <ul class="list-unstyled col-4 col-xs-6 col-sm-6 col-md-4 col-lg-4">
+            <li><a class="nav-link page" href="#">Home</a></li>
+            <li><a href="pages/books.html" class="nav-link page">Books</a></li>
+            <li><a href="/pages/Authors/Author.html" class="nav-link page">Authors</a></li>
+            <li><a class="nav-link page" href="pages/Libraries.html">Libraries</a></li>
+            <li><a class="nav-link page" href="/pages/Sites.html">Reading Sites</a></li>
+            <li><a href="/pages/Trivia.html" class="nav-link page">Trivia</a></li>
+            <li><a href="/pages/Feedback.html" class="nav-link page">Feedback</a></li>
+        </ul>
+        <ul class="list-unstyled col-4 col-xs-6 col-sm-6 col-md-4 col-lg-4">&copy; <b>Credits</b>
+            <li>IPMX CINEMATIC</li>
+            <li>GEMINI</li>
+            <li>Meta ai</li>
+            <li>BOOKBUB</li>
+            <li>Wikipedia</li>
+            <li>World Atlas</li>
+            <li>Current World Archaeology</li>
+        </ul>
+        <ul class="list-unstyled col-4 col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <li><img src="Pictures/camhi logo.png" alt="CAMHI" width="130px" class="my-4"></li>
+            <li>CAMARINES SUR NATIONAL HIGH SCHOOL</li>
+            <li>Created By: Group6</li>
+            <li>12-Prog1</li>
+        </ul>
+    </div>
+    <p>&copy; <b>2026 Reading Gallery. All Rights Reserved.</b></p>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<!-- hahahahahahah -->

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Sites</title>
+    <link rel="stylesheet" href="Styles/Homepage.css">
+    <link rel="stylesheet" href="Styles/bootstrap.min (1).css">
+    <link rel="icon" href="Pictures/sadetnalogo (2).png" type="image/png">
+
+    <style>
+        .page{
+            font-size: 1.2rem;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+        .navlist{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 8px;
+            margin: auto;
+            text-align: justify;
+            width: fit-content;
+            font-family: monospace;
+        }
+        .navlist li{
+            font-size: clamp(15px, 20px, 25px);
+        }
+        .nav-link{
+            color: #6D4C41;
+        }
+        .navbar-toggler {
+            border-color: white;
+        }
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        .intro{
+            border: white solid 2px;
+        }
+        .intro h1{
+            color: white;
+        }
+        .link{
+            text-decoration: underline;
+            color: white;
+            font-style: italic;
+        }
+        .link:hover{
+            color: aqua;
+        }
+
+        #summarryOfContents h1{
+            color: #6D4C41;
+            text-shadow: none;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 1rem + 1.5vw, 2rem);
+            margin-bottom: 1.5rem;
+        }
+        .tocBox{
+            background-color: white;
+            padding: clamp(1rem, 3vw, 1.75rem);
+            border-radius: 25px;
+            border: gray solid 5px;
+            box-sizing: border-box;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .tocBox ol{
+            color: black;
+            font-size: clamp(0.9rem, 0.8rem + 0.4vw, 1.15rem);
+            padding-left: 1.25rem;
+            margin: 0;
+            columns: 2;
+            column-gap: 2rem;
+        }
+        .tocBox ol li{
+            margin-bottom: 0.6rem;
+            line-height: 1.4;
+            break-inside: avoid;
+        }
+        .tocBox ol li a{
+            color: #6D4C41;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .tocBox ol li a:hover,
+        .tocBox ol li a:focus-visible{
+            text-decoration: underline;
+        }
+        @media (max-width: 768px){
+            .tocBox ol{ columns: 1; }
+        }
+
+        main [id]{
+            scroll-margin-top: 200px;
+        }
+        .site{
+            background-color: white;
+            border-radius: 25px;
+            border: gray solid 5px;
+            padding: clamp(1rem, 3vw, 1.75rem);
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+            transform: scale(1);
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+        .site.is-expanded{
+            z-index: 30;
+            transform: scale(1.05);
+            box-shadow: 0 25px 45px -12px rgba(0,0,0,0.35);
+        }
+        .siteicon{
+            border-radius: 18px;
+            background: #f4f1ec;
+            width: 72px;
+            height: 72px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            margin: 0 auto;
+        }
+        .siteicon img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .SiteName{
+            text-align: center;
+            font-size: 1.4rem;
+            margin-bottom: 0.4rem;
+        }
+        .SiteName a{
+            color: #6D4C41;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .SiteName a:hover,
+        .SiteName a:focus-visible{
+            text-decoration: underline;
+        }
+        .desc-wrap{
+            position: relative;
+            max-height: 4.6em;
+            overflow: hidden;
+            transition: max-height .4s ease;
+        }
+        .site.is-expanded .desc-wrap{
+            max-height: 600px;
+        }
+        .desc-wrap::after{
+            content: "";
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            height: 28px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0), #ffffff 90%);
+            transition: opacity .3s ease;
+        }
+        .site.is-expanded .desc-wrap::after{
+            opacity: 0;
+        }
+        .SiteInformation{
+            text-align: justify;
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: black;
+            margin: 0;
+        }
+        .toggle-hint{
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #6D4C41;
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+        .toggle-hint:hover{ color: #4a342c; }
+        .site.is-expanded .toggle-hint .show-more{ display: none; }
+        .site:not(.is-expanded) .toggle-hint .show-less{ display: none; }
+        .SiteCredit{
+            text-align: justify;
+            font-size: 0.85rem;
+            color: #555;
+            margin: 10px 0 0 0;
+        }
+
+        .sitesGrid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: clamp(1.25rem, 3vw, 2.25rem);
+            align-items: stretch;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        @media (max-width: 700px){
+            .sitesGrid{
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce){
+            .desc-wrap, .desc-wrap::after, .site{ transition: none !important; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="try.html"><img src="Pictures/sadetnalogo (2).png" alt="" width="60px" style="display: inline-block; margin-right: 10px;">Reading Gallery</a>
+
+
+        <!-- Hamburger -->
+        <button class="navbar-toggler ms-auto"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link page" href="../try.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="books.html" class="nav-link page">Books</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Author (1).html" class="nav-link page">Authors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page" href="Libraries.html">Libraries</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page" href="#" id="current">Reading Sites</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Trivia.html" class="nav-link page">Trivia</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Feedback (2).html" class="nav-link page">Feedback</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+</header>
+
+    <section class="intro">
+        <h1>Reading Websites</h1>
+        <p>Websites where you can read your preferred books &mdash; free.</p>
+    </section>
+
+    <section id="summarryOfContents">
+        <h1 class="text-white pb-3">Contents of the webpage:</h1>
+        <div class="tocBox">
+            <ol>
+                <li><a href="#gutenberg">Project Gutenberg</a></li>
+                <li><a href="#libby">Libby</a></li>
+                <li><a href="#kindle">Kindle</a></li>
+                <li><a href="#barnesnoble">Barnes &amp; Noble Online</a></li>
+                <li><a href="#kobo">Kobo</a></li>
+                <li><a href="#hoopla">Hoopla</a></li>
+                <li><a href="#childrenslibrary">International Children's Digital Library</a></li>
+                <li><a href="#smashwords">Smashwords</a></li>
+                <li><a href="#wattpad">Wattpad</a></li>
+            </ol>
+        </div>
+    </section>
+
+    <main>
+        <section class="mainContent">
+            <div class="sitesGrid">
+
+                <section class="site" id="gutenberg" tabindex="0" role="button" aria-expanded="false">
+                    <div class="d-flex flex-column align-items-center gap-3">
+                        <div class="siteicon"><img src="https://www.google.com/s2/favicons?domain=gutenberg.org&sz=128" alt=""></div>
+                        <div>
+                            <h2 class="SiteName"><a href="https://www.gutenberg.org/" target="_blank" class="link">Project Gutenberg</a></h2>
+                            <div class="desc-wrap">
+                                <p class="SiteInformation">
+                                    At Project Gutenburg, you can download and read over 57,000 free domain books. You can even read
+                                    free books online without downloading them, and find free books online for kids! The project was
+                                    started in 1971 in an effort to digitally archive books in the public domain. This is a great website
+                                    to frequent if you love classic titles by authors such as Charles Dickens, William Shakespeare, and
+                                    more!
+                                </p>
+                            </div>
+                            <button class="toggle-hint" type="button" tabindex="-1"><span class="show-more">Read more &darr;</span><span class="show-less">Show less &uarr;</span></button>
+                            <p class="SiteCredit">Info from: <a href="" target="_blank">Bookbub</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="site" id="libby" tabindex="0" role="button" aria-expanded="false">
+                    <div class="d-flex flex-column align-items-center gap-3">
+                        <div class="siteicon"><img src="https://www.google.com/s2/favicons?domain=libbyapp.com&sz=128" alt=""></div>
+                        <div>
+                            <h2 class="SiteName"><a href="https://help.libbyapp.com/en-us/6103.html" target="_blank" class="link">Libby</a></h2>
+                            <div class="desc-wrap">
+                                <p class="SiteInformation">
+                                    A library card from your local library and the Libby app will allow you to
+                                    read thousands of free books online. Just like your local library, Libby
+                                    boasts titles ranging from the buzziest new releases to comforting classics.
+                                    After downloading your titles you'll be able to access them anywhere &mdash; during
+                                    your commute, on the beach, in the car. The options are endless! You can even
+                                    download free audiobooks and magazines. It's a trip to the library without ever
+                                    leaving your couch!
+                                </p>
+                            </div>
+                            <button class="toggle-hint" type="button" tabindex="-1"><span class="show-more">Read more &darr;</span><span class="show-less">Show less &uarr;</span></button>
+                            <p class="SiteCredit">Info from: <a href="" target="_blank">Bookbub</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="site" id="kindle" tabindex="0" role="button" aria-expanded="false">
+                    <div class="d-flex flex-column align-items-center gap-3">
+                        <div class="siteicon"><img src="https://www.google.com/s2/favicons?domain=amazon.com&sz=128" alt=""></div>
+                        <div>
+                            <h2 class="SiteName"><a href="https://www.amazon.com/s?k=free+kindle-ebooks&i=stripbooks&adgrpid=190363475950&hvadid=779574076498&hvdev=c&hvexpln=0&hvlocphy=9002048&hvnetw=g&hvocijid=4380632583753595736--&hvqmt=e&hvrand=4380632583753595736&hvtargid=kwd-438890022950&hydadcr=22537_13821287_8187&mcid=fab87273331733ffa520ed5a11ba439b&tag=googhydr-20&ref=pd_sl_4l6lq3i6wn_e" target="_blank" class="link">Kindle</a></h2>
+                            <div class="desc-wrap">
+                                <p class="SiteInformation">
+                                    In addition to their priced books, Kindle has a selection of over 80,000
+                                    free ebooks. You can download these books to your Kindle device, or if you don't
+                                    have a Kindle you can use the Kindle app on your phone or tablet. There are new
+                                    free titles added daily. In addition to their constant catalog, Kindle also
+                                    offers flash deals where an ebook will be marked down to free for a brief period
+                                    of time.
+                                </p>
+                            </div>
+                            <button class="toggle-hint" type="button" tabindex="-1"><span class="show-more">Read more &darr;</span><span class="show-less">Show less &uarr;</span></button>
+                            <p class="SiteCredit">Info from: <a href="" target="_blank">Bookbub</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="site" id="barnesnoble" tabindex="0" role="button" aria-expanded="false">
+                    <div class="d-flex flex-column align-items-center gap-3">
+                        <div class="siteicon"><img src="https://www.google.com/s2/favicons?domain=barnesandnoble.com&sz=128" alt=""></div>
+                        <div>
+                            <h2 class="SiteName"><a href="https://www.barnesandnoble.com/b/free-ebooks/ebooks-nook/_/N-wZry0Z8qa" target="_blank" class="link">Barnes &amp; Noble Online</a></h2>
+                            <div class="desc-wrap">
+                                <p class="SiteInformation">
+                                    Barnes &amp; Noble is the biggest bookstore chain going, but did you know if
+                                    you have their Nook (or even the Nook app on your phone, if you don't have a
+                                    Nook!), you can download free books online? Their online store offers a huge
+                                    collection of free books in a range of genres from suspense to romance to
+                                    contemporary fiction. There are new books to download daily.
+                                </p>
+                            </div>
+                            <button class="toggle-hint" type="button" tabindex="-1"><span class="show-more">Read more &darr;</span><span class="show-less">Show less &uarr;</span></button>
+                            <p class="SiteCredit">Info from: <a href="" target="_blank">Bookbub</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="site" id="kobo" tabindex="0" role="button" aria-expanded="false">
+                    <div class="d-flex flex-column align-items-center gap-3">
+                        <div class="siteicon"><img src="https://www.google.com/s2/favicons?domain=kobo.com&sz=128" alt=""></div>
+                        <div>
+                            <h2 class="SiteName"><a href="https://www.kobo.com/us/en/p/free-ebooks?srsltid=AfmBOoqBVcwbwVfhCaemG2MUYakFM8-W3P1tBcN3iZmwdckOEbTY0s6e" target="_blank" class="link">Kobo</a></h2>
+                            <div class="desc-wrap">
+                                <p class="SiteInformation">
+                                    Are you a Kobo user? Good news! There are free ebooks for you to download to your Kobo device. You can count on their large collection of free offerings, as well as new titles to discover daily. You also don't need the Kobo to read free Kobo books; you can download their app to your mobile device or tablet.
+                                </p>
+                            </div>
+                            <button class="toggle-hint" type="button" tabindex="-1"><span class="show-more">Read more &darr;</span><span class="show-less">Show less &uarr;</span></button>
+                            <p class="SiteCredit">Info from: <a href="" target="_blank">Bookbub</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="site" id="hoopla" tabindex="0" role="button" aria-expanded="false">
+                    <div class="d-flex flex-column align-items-center gap-3">
+                        <div class="siteicon"><img src="https://www.google.com/s2/favicons?domain=hoopladigital.com&sz=128" alt=""></div>
+                        <div>
+                            <h2 class="SiteName"><a href="https://www.hoopladigital.com/" target="_blank" class="link">Hoopla</a></h2>
+                            <div class="desc-wrap">
+                                <p class="SiteInformation">
+                                    Much like Libby, all you need is your library card to access free ebooks with Hoopla. Once you connect your card, the digital public library is in the palm of your hands. You can find recent bestsellers, classics, and lots of genre picks. You can also download free audiobooks and stream other content like movies. When you find the ebook you'd like, you can download it directly to your ereader, which will be linked to your Hoopla account.
+                                </p>
+                            </div>
+                            <button class="toggle-hint" type="button" tabindex="-1"><span class="show-more">Read more &darr;</span><span class="show-less">Show less &uarr;</span></button>
+                            <p class="SiteCredit">Info from: <a href="" target="_blank">Bookbub</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="site" id="childrenslibrary" tabindex="0" role="button" aria-expanded="false">
+                    <div class="d-flex flex-column align-items-center gap-3">
+                        <div class="siteicon"><img src="https://www.google.com/s2/favicons?domain=childrenslibrary.org&sz=128" alt=""></div>
+                        <div>
+                            <h2 class="SiteName"><a href="http://www.childrenslibrary.org/" target="_blank" class="link">International Children's Digital Library</a></h2>
+                            <div class="desc-wrap">
+                                <p class="SiteInformation">
+                                    The International Children's Digital Library is a free online library designed for children ages three to 13 and it was developed to overcome the language barriers present in modern society. The site offers its titles in over 59 languages, making it an amazing resource for anyone learning a new language &mdash; young or old!
+                                </p>
+                            </div>
+                            <button class="toggle-hint" type="button" tabindex="-1"><span class="show-more">Read more &darr;</span><span class="show-less">Show less &uarr;</span></button>
+                            <p class="SiteCredit">Info from: <a href="" target="_blank">Bookbub</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="site" id="smashwords" tabindex="0" role="button" aria-expanded="false">
+                    <div class="d-flex flex-column align-items-center gap-3">
+                        <div class="siteicon"><img src="https://www.google.com/s2/favicons?domain=smashwords.com&sz=128" alt=""></div>
+                        <div>
+                            <h2 class="SiteName"><a href="https://www.smashwords.com/" target="_blank" class="link">Smashwords</a></h2>
+                            <div class="desc-wrap">
+                                <p class="SiteInformation">
+                                    The Smashwords website and app offer a distribution platform for independent authors and publishers. While some titles on offer are paid titles, a significant portion are free, including many first-in-series offerings. Smashwords is also a great platform to self-publish, as it puts a special emphasis on getting emerging authors as many eyeballs on their writing as possible. There are dozens of genres to choose from. Once you find a title you like, you can either read the book in-app or follow some steps to download it to your ereader.
+                                </p>
+                            </div>
+                            <button class="toggle-hint" type="button" tabindex="-1"><span class="show-more">Read more &darr;</span><span class="show-less">Show less &uarr;</span></button>
+                            <p class="SiteCredit">Info from: <a href="" target="_blank">Bookbub</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="site" id="wattpad" tabindex="0" role="button" aria-expanded="false">
+                    <div class="d-flex flex-column align-items-center gap-3">
+                        <div class="siteicon"><img src="https://www.google.com/s2/favicons?domain=wattpad.com&sz=128" alt=""></div>
+                        <div>
+                            <h2 class="SiteName"><a href="https://www.wattpad.com/" target="_blank" class="link">Wattpad</a></h2>
+                            <div class="desc-wrap">
+                                <p class="SiteInformation">
+                                    Wattpad is an inviting community of 65 million users who love all things books! Amateur and professional writers across the world publish their short stories and full-length novels on the platform. There's also a community feature where you can interact with your favorite authors, enter writing contests, and more. On Wattpad you can see how many people have read the book, the average reading time, the genre, and more. There's also fan fiction! And you can read directly in the app.
+                                </p>
+                            </div>
+                            <button class="toggle-hint" type="button" tabindex="-1"><span class="show-more">Read more &darr;</span><span class="show-less">Show less &uarr;</span></button>
+                            <p class="SiteCredit">Info from: <a href="" target="_blank">Bookbub</a></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+ <footer>
+    <div class="row">
+        <ul class="list-unstyled col-4 col-xs-6 col-sm-6 col-md-4 col-lg-4" style="color:white">
+            <li><a class="nav-link page" href="#">Home</a></li>
+            <li><a href="pages/books.html" class="nav-link page">Books</a></li>
+            <li><a href="/pages/Authors/Author.html" class="nav-link page">Authors</a></li>
+            <li><a class="nav-link page" href="pages/Libraries.html">Libraries</a></li>
+            <li><a class="nav-link page" href="/pages/Sites.html">Reading Sites</a></li>
+            <li><a href="/pages/Trivia.html" class="nav-link page">Trivia</a></li>
+            <li><a href="/pages/Feedback.html" class="nav-link page">Feedback</a></li>
+        </ul>
+        <ul class="list-unstyled col-4 col-xs-6 col-sm-6 col-md-4 col-lg-4">&copy; <b>Credits</b>
+            <li>IPMX CINEMATIC</li>
+            <li>GEMINI</li>
+            <li>Meta ai</li>
+            <li>BOOKBUB</li>
+            <li>Wikipedia</li>
+            <li>World Atlas</li>
+            <li>Current World Archaeology</li>
+        </ul>
+        <ul class="list-unstyled col-4 col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <li><img src="Pictures/camhi logo.png" alt="CAMHI" width="130px" class="my-4"></li>
+            <li>CAMARINES SUR NATIONAL HIGH SCHOOL</li>
+            <li>Created By: Group6</li>
+            <li>12-Prog1</li>
+        </ul>
+    </div>
+    <p>&copy; <b>2026 Reading Gallery. All Rights Reserved.</b></p>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('.site').forEach(function (card) {
+            // "locked" means the person explicitly clicked/tapped to pin the
+            // card open (or closed). While locked, hovering in and out no
+            // longer changes the expanded state, so "Show less" always works
+            // even if the cursor is still sitting over the card.
+            var locked = false;
+
+            function setExpanded(state) {
+                card.classList.toggle('is-expanded', state);
+                card.setAttribute('aria-expanded', state);
+            }
+
+            card.addEventListener('mouseenter', function () {
+                if (!locked) setExpanded(true);
+            });
+
+            card.addEventListener('mouseleave', function () {
+                if (!locked) setExpanded(false);
+            });
+
+            card.addEventListener('click', function (e) {
+                if (e.target.closest('a')) return; // let real links navigate
+                locked = !locked;
+                setExpanded(locked);
+            });
+
+            card.addEventListener('keydown', function (e) {
+                if (e.target.closest('a')) return;
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    locked = !locked;
+                    setExpanded(locked);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

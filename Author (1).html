@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="Styles/Authors.css">
+     <link rel="stylesheet" href="Styles/bootstrap.min (1).css">
+    <link rel="icon" href="Pictures/sadetnalogo (2).png" type="image/png">
+
+     <style>
+        #authors{
+            color: white;
+        }
+        .page{
+            font-size: 1.2rem;
+        }
+     </style>
+</head>
+
+<div id="authorModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="../../try.html"><img src="/Pictures/sadetnalogo (2).png" alt="" width="60px" style="display: inline-block; margin-right: 10px;">Reading Gallery</a>
+
+
+        <!-- Hamburger -->
+        <button class="navbar-toggler ms-auto"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link page" href="../../try.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../books.html" class="nav-link page">Books</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link page" id="current">Authors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page" href="../Libraries.html">Libraries</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page" href="../Sites.html">Reading Sites</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../Trivia.html" class="nav-link page">Trivia</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Feedback (2).html" class="nav-link page">Feedback</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+</header>
+
+
+    <div class="authors-header">
+         <h2 id="authors">Authors</h2>    
+
+         <p class="authors-intro">
+          Authors are the creative minds behind the stories, ideas, and knowledge that shape our world.<br>
+          They have the power to transport us to different times and places, challenge our perspectives,<br>
+          and inspire us to think, feel, and dream. Below are some of the most influential authors<br>
+          whose works have left a lasting impact on literature and society.
+         </p>
+         
+         <p class="authors-intro">
+          Explore the lives and works of these remarkable authors, and discover the stories that have<br>
+          captivated readers for generations. From classic literature to contemporary fiction,<br>
+          these authors have enriched our lives with their words and ideas.
+         </div>
+       
+             <div class="section-title">
+             <h2>Top 10 Filipino Authors</h2>
+                </div>
+
+                <p class="note">
+    <strong>📌 NOTE:</strong> Click any author's picture to view their complete biography, famous works, personal information, and achievements.
+</p>
+
+         <section class="authors-container">
+            <div class="international-author">
+                
+
+    <h3>Jose Protacio Rizal Mercado Y Alonzo Realonda Also known as Jose Rizal</h3>
+
+    <img src="/Pictures/jose rizal.jpg"
+         alt="Jose Rizal"width="300"
+         onclick="showAuthor('rizal')">
+
+            </div>
+            <div class="international-author">
+                <h3>Nicomedes Marquez Joaquin Also Known As Nick Joaquin</h3>
+                 
+                <img src="Pictures/nick joaquin.jpg" alt="Nick Joaquin" width="300" onclick="showAuthor('nick')">
+                </a>
+               
+
+            </div>
+
+             <div class="international-author">
+                 <h3>Jose Maria Sison Y reyes also known as Sionel Jose</h3>
+                 
+                <img src="Pictures/Jose maria sison.jpg" alt="F. Sionil José" width="300" onclick="showAuthor('sionil')">
+               </a>
+               
+             </div>
+
+              <div class="international-author">
+                 <h3>Lualhati Torres Bautista also known as Lualhati Bautista</h3>
+                 
+                <img src="Pictures/lualhati.jpg" alt="Lualhati Bautista" width="300" onclick="showAuthor('lualhati')">
+                </a>
+              
+              </div>
+
+               <div class="international-author">
+                  <h3>Francisco Balagtas y Dela Cruz also known as Fransisco Balagtas</h3>
+                 
+                <img src="Pictures/Fransisco jose (1).jpg" alt="Francisco Balagtas" width="300" onclick="showAuthor('balagtas')">
+                </a>
+                
+               </div>
+
+                <div class="international-author">
+                     <h3>Carlos Sampayan Bulosanl also known as Carlos Bulosan</h3>
+                     
+                    <img src="Pictures/Carlos sampayan.jpg" alt="Carlos Bulosan" width="300" onclick="showAuthor('bulosan')">
+                    </a>
+                    
+                 
+                   
+                </div>
+
+                 <div class="international-author">
+                      <h3>Edith Lopez Tiempo also known as Edith Tiempo</h3>
+                   
+                    <img src="Pictures/Edith LOpez.jpg" alt="Edith Tiempo" width="300" onclick="showAuthor('edith')">
+                    </a>
+                   
+                  
+                 </div>
+
+                  <div class="international-author">
+                     <h3>Virgilio S. Almario also known as Rio Alma</h3>
+                    
+                    <img src="Pictures/virgilio almario (1).jpg" alt="Virgilio S. Almario" width="300" onclick="showAuthor('virgilio')">
+                    </a>
+                    
+                  </div>
+
+                   <div class="international-author">
+                     <h3>Bob Ong</h3>
+                     
+                    <img src="Pictures/bob ong.jpg" alt="Bob Ong" width="300" onclick="showAuthor('bob')">
+                    </a>
+                 
+                   </div>
+
+                    <div class="international-author">
+                        <h3>Genoveva Edroza Matute</h3>
+                        
+                        <img src="Pictures/Genoveva Edroza.jpg" alt="Genoveva Edroza Matute" width="300" onclick="showAuthor('genoveva')">
+                        </a>
+                        
+                    </div>
+          
+                       
+                            <div class="section-title">
+                                <h2>Top 10 International Authors</h2>
+                            </div>
+    <div class="international-author">
+      
+        <h3>William Shakespeare</h3>    
+       
+        <img src="Pictures/william-shakespeare-wikipedia (2).jpg" alt="William Shakespeare" width="300" onclick="showAuthor('shakespeare')">
+        </a>
+       
+    </div>
+
+    <div class="international-author">
+        <h3>Joanne Rowling also known as J. K. Rowling</h3>
+        
+        <img src="Pictures/J.K rowling (1).jpg"J. K. Rowling" width="300" onclick="showAuthor('rowling')">
+        </a>
+       
+    </div>
+
+    <div class="international-author">
+        <h3>Dame Agatha Mary Clarissa Christie also known as Agatha Christie</h3>
+     
+        <img src="Pictures/Agatha Cristie (1).jpg" alt="Agatha Christie" width="300" onclick="showAuthor('christie')">
+       
+    </div>
+
+    <div class="international-author">
+        <h3>Eric Arthur Blair also known as George Orwell</h3>
+       
+        <img src="Pictures/george Orwel.jpg" alt="George Orwell" width="300" onclick="showAuthor('orwell')">
+        </a>
+       
+    </div>
+
+    <div class="international-author">
+        <h3>Jane Austen</h3>
+     
+        <img src="Pictures/Jane Austen (1).jpg" alt="Jane Austen" width="300" onclick="showAuthor('austen')">
+        </a>
+     
+    </div>
+
+    <div class="international-author">
+        <h3>Count Lev Nikolayevich Tolstoy also known as Leo Tolstoy</h3>
+        
+        <img src="Pictures/Leo Tolstoy (1).jpg" alt="Leo Tolstoy" width="300" onclick="showAuthor('tolstoy')">
+        </a>
+       
+    </div>
+
+    <div class="international-author">
+        <h3>Samuel Langhorne Clemens also known as Mark Twain</h3>
+       
+        <img src="Pictures/Mark twain.jpg" alt="Mark Twain" width="300" onclick="showAuthor('twain')">
+        </a>
+      
+    </div>
+
+    <div class="international-author">
+        <h3>Ernest Miller Hemingway also known as Ernest Hemingway</h3>
+       
+        <img src="Pictures/Ernes miller.jpg" alt="Ernest Hemingway" width="300" onclick="showAuthor('hemingway')">
+        </a>
+       
+    </div>
+
+    <div class="international-author">
+        <h3>John Ronald Reuel Tolkien also known as J. R. R. Tolkien</h3>
+       
+        <img src="Pictures/J.J.R (1).jpg" alt="J. R. R. Tolkien" width="300" onclick="showAuthor('tolkien')">
+        </a>
+
+    </div>
+
+    <div class="international-author">
+        <h3>Stephen Edwin King also known as Stephen King</h3>
+        
+        <img src="Pictures/Stephen King (1).jpg" alt="Stephen King" width="300" onclick="showAuthor('king')">
+        </a>
+        
+    </div>
+
+</section>
+
+<button onclick="topFunction()" id="topBtn" title="Go to top">⬆</button>
+
+<script>
+let topButton = document.getElementById("topBtn");
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topButton.style.display = "block";
+    } else {
+        topButton.style.display = "none";
+    }
+};
+
+function topFunction() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+</script>
+
+<script>
+
+const modal = document.getElementById("authorModal");
+const modalBody = document.getElementById("modalBody");
+const closeBtn = document.querySelector(".close");
+
+function showAuthor(author){
+
+let content="";
+
+switch(author){
+
+case "rizal":
+content=`
+<h1>Jose Rizal</h1>
+<img src="/Pictures/jose rizal.jpg">
+<h2>Also Known As: Jose Rizal</h2>
+<hr>
+<h3>📅 Personal Information</h3>
+
+<p><strong>Born:</strong> June 19, 1861</p>
+
+<p><strong>Died:</strong> December 30, 1896</p>
+
+<p><strong>Nationality:</strong> Filipino</p>
+
+<p><strong>Occupation:</strong> Novelist, National Hero, Ophthalmologist</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>Noli Me Tangere</li>
+<li>El Filibusterismo</li>
+<li>Mi Último Adiós</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+Si Jose Rizal ay isinilang noong Hunyo 19, 1861 sa Calamba, Laguna.
+Isa siyang pambansang bayani ng Pilipinas, manunulat, doktor, at makabayan.
+Isinulat niya ang Noli Me Tangere at El Filibusterismo na nagmulat sa mga Pilipino laban sa pananakop ng Espanya.
+Dahil sa kanyang mga isinulat at adhikain, siya ay binitay noong Disyembre 30, 1896 sa Bagumbayan.
+</p>
+<hr>
+
+<h3>💬 Famous Quote</h3>
+
+<blockquote>
+"The youth is the hope of our future."
+</blockquote>
+`;
+break;
+
+case "nick":
+content=`
+<h1>Nick Joaquin</h1>
+
+<img src="Pictures/nick joaquin.jpg">
+
+<h2>Nicomedes Marquez Joaquin</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> May 4, 1917</p>
+
+<p><b>Died:</b> April 29, 2004</p>
+
+<p><b>Nationality:</b> Filipino</p>
+
+<p><b>Occupation:</b> Author, Journalist, Historian</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>The Woman Who Had Two Navels</li>
+<li>A Question of Heroes</li>
+<li>Tropical Gothic</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+Nick Joaquin was one of the greatest Filipino writers in English. He wrote novels, short stories, essays, and historical works that explored Philippine culture, history, and identity. He received the title of National Artist for Literature in 1976 because of his outstanding contributions to Philippine literature.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>National Artist for Literature (1976)</p>
+`;
+break;
+
+case "sionil":
+content=`
+<h1>F. Sionil Jose</h1>
+
+<img src="Pictures/Jose maria sison.jpg">
+
+<h2>Francisco Sionil Jose</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> December 3, 1924</p>
+
+<p><b>Died:</b> January 6, 2022</p>
+
+<p><b>Nationality:</b> Filipino</p>
+
+<p><b>Occupation:</b> Novelist, Writer, Journalist</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>Rosales Saga</li>
+<li>Po-on</li>
+<li>Tree</li>
+<li>My Brother, My Executioner</li>
+<li>Mass</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+F. Sionil Jose was one of the most respected Filipino novelists writing in English. His novels focused on Philippine history, social justice, poverty, and the struggles of ordinary Filipinos. Through his stories, he encouraged readers to understand the country's culture and history.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>National Artist for Literature (2001)</p>
+`;
+break;
+
+
+case "lualhati":
+content=`
+<h1>Lualhati Bautista</h1>
+
+<img src="Pictures/lualhati.jpg">
+
+<h2>Lualhati Torres Bautista</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> December 2, 1945</p>
+
+<p><b>Died:</b> February 12, 2023</p>
+
+<p><b>Nationality:</b> Filipino</p>
+
+<p><b>Occupation:</b> Novelist, Screenwriter, Writer</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>Dekada '70</li>
+<li>Bata, Bata... Pa'no Ka Ginawa?</li>
+<li>Gapô</li>
+<li>Desaparesidos</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+Lualhati Bautista was one of the Philippines' most respected novelists. She was known for writing stories about women's rights, family, society, and the struggles of Filipinos during difficult periods in Philippine history. Her novels continue to inspire readers because of their powerful messages about courage, equality, and social justice.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>
+Lualhati Bautista received numerous literary awards for her outstanding novels and became one of the most influential Filipino writers of her generation.
+</p>
+`;
+break;
+``
+
+case "balagtas":
+content=`
+<h1>Francisco Balagtas</h1>
+
+<img src="Pictures/Fransisco jose (1).jpg">
+
+<h2>Francisco Balagtas y de la Cruz</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> April 2, 1788</p>
+
+<p><b>Died:</b> February 20, 1862</p>
+
+<p><b>Nationality:</b> Filipino</p>
+
+<p><b>Occupation:</b> Poet and Writer</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>Florante at Laura</li>
+<li>Orosman at Zafira</li>
+<li>La India Elegante y el Negrito Amante</li>
+<li>Abdol at Miserena</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+Francisco Balagtas, also known as Francisco Baltazar, is considered one of the greatest Filipino poets. He became famous for his masterpiece <i>Florante at Laura</i>, an epic poem that reflects love, courage, justice, and patriotism. His literary works greatly influenced Philippine literature and continue to be studied by students today.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>Recognized as the "Prince of Tagalog Poets" and one of the greatest figures in Philippine literature.</p>
+`;
+break;
+
+case "bulosan":
+content=`
+<h1>Carlos Bulosan</h1>
+
+<img src="Pictures/Carlos sampayan.jpg">
+
+<h2>Carlos Sampayan Bulosan</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> November 24, 1913</p>
+
+<p><b>Died:</b> September 11, 1956</p>
+
+<p><b>Nationality:</b> Filipino</p>
+
+<p><b>Occupation:</b> Writer, Poet, Novelist</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>America Is in the Heart</li>
+<li>The Laughter of My Father</li>
+<li>The Cry and the Dedication</li>
+<li>Voice of Bataan</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+Carlos Bulosan was a Filipino writer who became well known for writing about the lives and struggles of Filipino immigrants in the United States. His works highlighted poverty, discrimination, hard work, and the hope for equality. His autobiography, <i>America Is in the Heart</i>, remains one of the most important books about the Filipino immigrant experience.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>Recognized as one of the most influential Filipino-American writers whose works continue to inspire readers around the world.</p>
+`;
+break;
+
+
+case "edith":
+content=`
+<h1>Edith Tiempo</h1>
+
+<img src="Pictures/Edith LOpez.jpg">
+
+<h2>Edith Lopez Tiempo</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> April 22, 1919</p>
+<p><b>Died:</b> August 21, 2011</p>
+<p><b>Nationality:</b> Filipino</p>
+<p><b>Occupation:</b> Poet, Novelist, Literary Critic</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>The Tracks of Babylon</li>
+<li>The Builder</li>
+<li>A Blade of Fern</li>
+<li>His Native Coast</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+Edith Tiempo was one of the Philippines' greatest poets and fiction writers. She helped establish the Silliman National Writers Workshop, which trained many Filipino writers. Her works are known for their beautiful language and deep insights into human life.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>National Artist for Literature (1999).</p>
+`;
+break;
+
+
+case "virgilio":
+content=`
+<h1>Virgilio S. Almario</h1>
+
+<img src="Pictures/virgilio almario (1).jpg">
+
+<h2>Also Known As: Rio Alma</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> March 9, 1944</p>
+<p><b>Nationality:</b> Filipino</p>
+<p><b>Occupation:</b> Poet, Literary Critic, Translator</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>Makinasyon</li>
+<li>Doktrinang Anakpawis</li>
+<li>Mga Retrato at Rekwerdo</li>
+<li>Walong Dekada ng Makabagong Tulang Pilipino</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+Virgilio S. Almario, better known by his pen name Rio Alma, is one of the most respected Filipino poets. He has written numerous books and has worked to promote and develop the Filipino language and literature through his poems, essays, and translations.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>National Artist for Literature (2003).</p>
+`;
+break;
+
+
+case "bob":
+content=`
+<h1>Bob Ong</h1>
+
+<img src="Pictures/bob ong.jpg">
+
+<h2>Bob Ong</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Nationality:</b> Filipino</p>
+<p><b>Occupation:</b> Author</p>
+<p><b>Known For:</b> Humorous and inspirational books</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>ABNKKBSNPLAko?!</li>
+<li>Stainless Longganisa</li>
+<li>Ang Mga Kaibigan ni Mama Susan</li>
+<li>MacArthur</li>
+<li>Kapitan Sino</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+Bob Ong is one of the Philippines' most popular contemporary writers. Although his real identity remains unknown, his books have become bestsellers because of their humor, relatable stories, and meaningful lessons about Filipino life and society.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>Recognized as one of the country's bestselling modern Filipino authors.</p>
+`;
+break;
+
+
+case "genoveva":
+content=`
+<h1>Genoveva Edroza Matute</h1>
+
+<img src="Pictures/Genoveva Edroza.jpg">
+
+<h2>Genoveva Edroza Matute</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> January 13, 1915</p>
+<p><b>Died:</b> March 21, 2009</p>
+<p><b>Nationality:</b> Filipino</p>
+<p><b>Occupation:</b> Teacher, Writer</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>Kuwento ni Mabuti</li>
+<li>Paglalayag sa Puso ng Isang Bata</li>
+<li>Parusa</li>
+<li>Maganda Pa ang Daigdig</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+Genoveva Edroza Matute was a Filipino educator and award-winning writer. She became well known for her short stories that portrayed the everyday lives, dreams, and struggles of ordinary Filipinos. Her works remain important in Philippine literature and are widely studied in schools.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>Cultural Center of the Philippines Centennial Honors for the Arts and recipient of numerous literary awards.</p>
+`;
+break;
+
+
+case "shakespeare":
+content=`
+<h1>William Shakespeare</h1>
+
+<img src="Pictures/william-shakespeare-wikipedia (2).jpg">
+
+<h2>William Shakespeare</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> April 1564</p>
+<p><b>Died:</b> April 23, 1616</p>
+<p><b>Nationality:</b> English</p>
+<p><b>Occupation:</b> Playwright, Poet, Actor</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>Romeo and Juliet</li>
+<li>Hamlet</li>
+<li>Macbeth</li>
+<li>Othello</li>
+<li>King Lear</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+William Shakespeare is widely regarded as the greatest writer in the English language. His plays and poems have been translated into many languages and are still performed around the world. His works explore themes of love, ambition, jealousy, and human nature.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>Known as the "Bard of Avon" and considered the greatest playwright of all time.</p>
+`;
+break;
+
+
+case "rowling":
+content=`
+<h1>J.K. Rowling</h1>
+
+<img src="Pictures/J.K rowling (1).jpg">
+
+<h2>Joanne Rowling</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> July 31, 1965</p>
+<p><b>Nationality:</b> British</p>
+<p><b>Occupation:</b> Author, Screenwriter</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>Harry Potter and the Sorcerer's Stone</li>
+<li>Harry Potter and the Chamber of Secrets</li>
+<li>Harry Potter and the Prisoner of Azkaban</li>
+<li>The Casual Vacancy</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+J.K. Rowling is a British author best known for creating the Harry Potter series. Her books have inspired millions of readers around the world and have been adapted into successful films.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>One of the world's best-selling authors, with over 500 million Harry Potter books sold.</p>
+`;
+break;
+
+
+case "christie":
+content=`
+<h1>Agatha Christie</h1>
+
+<img src="Pictures/Agatha Cristie (1).jpg">
+
+<h2>Dame Agatha Mary Clarissa Christie</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> September 15, 1890</p>
+<p><b>Died:</b> January 12, 1976</p>
+<p><b>Nationality:</b> British</p>
+<p><b>Occupation:</b> Novelist, Playwright</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>Murder on the Orient Express</li>
+<li>And Then There Were None</li>
+<li>Death on the Nile</li>
+<li>The Murder of Roger Ackroyd</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+Agatha Christie is known as the "Queen of Mystery." She wrote many detective novels featuring famous characters such as Hercule Poirot and Miss Marple. Her books remain among the best-selling works of all time.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>Recognized as the best-selling novelist in history.</p>
+`;
+break;
+
+
+case "orwell":
+content=`
+<h1>George Orwell</h1>
+
+<img src="Pictures/george Orwel.jpg">
+
+<h2>Eric Arthur Blair</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> June 25, 1903</p>
+<p><b>Died:</b> January 21, 1950</p>
+<p><b>Nationality:</b> British</p>
+<p><b>Occupation:</b> Novelist, Essayist, Journalist</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>1984</li>
+<li>Animal Farm</li>
+<li>Homage to Catalonia</li>
+<li>Down and Out in Paris and London</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+George Orwell was an English writer whose novels explored politics, freedom, and social justice. His books continue to influence readers because of their powerful messages about truth and democracy.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>One of the most influential political writers of the 20th century.</p>
+`;
+break;
+
+
+case "austen":
+content=`
+<h1>Jane Austen</h1>
+
+<img src="Pictures/Jane Austen (1).jpg">
+
+<h2>Jane Austen</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> December 16, 1775</p>
+<p><b>Died:</b> July 18, 1817</p>
+<p><b>Nationality:</b> British</p>
+<p><b>Occupation:</b> Novelist</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>Pride and Prejudice</li>
+<li>Sense and Sensibility</li>
+<li>Emma</li>
+<li>Persuasion</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+Jane Austen was an English novelist famous for her stories about family, love, and society. Her novels remain popular because of their memorable characters and timeless themes.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>One of the greatest novelists in English literature.</p>
+`;
+break;
+
+case "tolstoy":
+content=`
+<h1>Leo Tolstoy</h1>
+
+<img src="Pictures/Leo Tolstoy (1).jpg">
+
+<h2>Count Lev Nikolayevich Tolstoy</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> September 9, 1828</p>
+<p><b>Died:</b> November 20, 1910</p>
+<p><b>Nationality:</b> Russian</p>
+<p><b>Occupation:</b> Novelist, Philosopher</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>War and Peace</li>
+<li>Anna Karenina</li>
+<li>Resurrection</li>
+<li>The Death of Ivan Ilyich</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+Leo Tolstoy was one of the greatest writers in world literature. His novels explored love, family, war, morality, and the meaning of life. His works continue to inspire readers across generations.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>Recognized as one of the greatest novelists in history.</p>
+`;
+break;
+
+
+case "twain":
+content=`
+<h1>Mark Twain</h1>
+
+<img src="Pictures/Mark twain.jpg">
+
+<h2>Samuel Langhorne Clemens</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> November 30, 1835</p>
+<p><b>Died:</b> April 21, 1910</p>
+<p><b>Nationality:</b> American</p>
+<p><b>Occupation:</b> Writer, Humorist</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>The Adventures of Tom Sawyer</li>
+<li>Adventures of Huckleberry Finn</li>
+<li>The Prince and the Pauper</li>
+<li>A Connecticut Yankee in King Arthur's Court</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+Mark Twain was an American author famous for his humor and adventure stories. His books are considered classics of American literature and are enjoyed by readers of all ages.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>Known as the "Father of American Literature."</p>
+`;
+break;
+
+
+case "hemingway":
+content=`
+<h1>Ernest Hemingway</h1>
+
+<img src="Pictures/Ernes miller.jpg">
+
+<h2>Ernest Miller Hemingway</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> July 21, 1899</p>
+<p><b>Died:</b> July 2, 1961</p>
+<p><b>Nationality:</b> American</p>
+<p><b>Occupation:</b> Novelist, Journalist</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>The Old Man and the Sea</li>
+<li>A Farewell to Arms</li>
+<li>For Whom the Bell Tolls</li>
+<li>The Sun Also Rises</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+Ernest Hemingway was an American novelist known for his simple and powerful writing style. His stories often focused on courage, adventure, and the human spirit.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>Winner of the Nobel Prize in Literature (1954).</p>
+`;
+break;
+
+
+case "tolkien":
+content=`
+<h1>J.R.R. Tolkien</h1>
+
+<img src="Pictures/J.J.R (1).jpg">
+
+<h2>John Ronald Reuel Tolkien</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> January 3, 1892</p>
+<p><b>Died:</b> September 2, 1973</p>
+<p><b>Nationality:</b> British</p>
+<p><b>Occupation:</b> Writer, Professor</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>The Hobbit</li>
+<li>The Lord of the Rings</li>
+<li>The Silmarillion</li>
+<li>The Children of Húrin</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+J.R.R. Tolkien was an English author and professor who created the fantasy world of Middle-earth. His books have inspired generations of readers and influenced modern fantasy literature.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>Widely regarded as the father of modern fantasy literature.</p>
+`;
+break;
+
+
+case "king":
+content=`
+<h1>Stephen King</h1>
+
+<img src="Pictures/Stephen King (1).jpg">
+
+<h2>Stephen Edwin King</h2>
+
+<hr>
+
+<h3>📅 Personal Information</h3>
+
+<p><b>Born:</b> September 21, 1947</p>
+<p><b>Nationality:</b> American</p>
+<p><b>Occupation:</b> Author</p>
+
+<hr>
+
+<h3>📚 Famous Works</h3>
+
+<ul>
+<li>It</li>
+<li>The Shining</li>
+<li>Carrie</li>
+<li>Misery</li>
+<li>The Green Mile</li>
+</ul>
+
+<hr>
+
+<h3>📖 Biography</h3>
+
+<p>
+Stephen King is one of the world's most successful authors of horror, suspense, and supernatural fiction. His novels have sold millions of copies and many have been adapted into popular films and television series.
+</p>
+
+<hr>
+
+<h3>🏆 Achievement</h3>
+
+<p>One of the best-selling authors of all time, with hundreds of millions of books sold worldwide.</p>
+`;
+break;
+
+}
+
+modalBody.innerHTML=content;
+modal.style.display="block";
+
+}
+
+closeBtn.onclick=function(){
+modal.style.display="none";
+}
+
+window.onclick=function(event){
+if(event.target==modal){
+modal.style.display="none";
+}
+}
+
+</script>
+
+<footer>
+    <div class="row">
+        <ul class="list-unstyled col-4 col-xs-6 col-sm-6 col-md-4 col-lg-4">
+            <li><a class="nav-link page" href="#">Home</a></li>
+            <li><a href="pages/books.html" class="nav-link page">Books</a></li>
+            <li><a href="/pages/Authors/Author.html" class="nav-link page">Authors</a></li>
+            <li><a class="nav-link page" href="pages/Libraries.html">Libraries</a></li>
+            <li><a class="nav-link page" href="/pages/Sites.html">Reading Sites</a></li>
+            <li><a href="/pages/Trivia.html" class="nav-link page">Trivia</a></li>
+            <li><a href="/pages/Feedback.html" class="nav-link page">Feedback</a></li>
+        </ul>
+        <ul class="list-unstyled col-4 col-xs-6 col-sm-6 col-md-4 col-lg-4">&copy; <b>Credits</b>
+            <li>IPMX CINEMATIC</li>
+            <li>GEMINI</li>
+            <li>Meta ai</li>
+            <li>BOOKBUB</li>
+            <li>Wikipedia</li>
+            <li>World Atlas</li>
+            <li>Current World Archaeology</li>
+        </ul>
+        <ul class="list-unstyled col-4 col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <li><img src="Pictures/camhi logo.png" alt="CAMHI" width="130px" class="my-4"></li>
+            <li>CAMARINES SUR NATIONAL HIGH SCHOOL</li>
+            <li>Created By: Group6</li>
+            <li>12-Prog1</li>
+        </ul>
+    </div>
+    <p>&copy; <b>2026 Reading Gallery. All Rights Reserved.</b></p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('.site').forEach(function (card) {
+            // "locked" means the person explicitly clicked/tapped to pin the
+            // card open (or closed). While locked, hovering in and out no
+            // longer changes the expanded state, so "Show less" always works
+            // even if the cursor is still sitting over the card.
+            var locked = false;
+
+            function setExpanded(state) {
+                card.classList.toggle('is-expanded', state);
+                card.setAttribute('aria-expanded', state);
+            }
+
+            card.addEventListener('mouseenter', function () {
+                if (!locked) setExpanded(true);
+            });
+
+            card.addEventListener('mouseleave', function () {
+                if (!locked) setExpanded(false);
+            });
+
+            card.addEventListener('click', function (e) {
+                if (e.target.closest('a')) return; // let real links navigate
+                locked = !locked;
+                setExpanded(locked);
+            });
+
+            card.addEventListener('keydown', function (e) {
+                if (e.target.closest('a')) return;
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    locked = !locked;
+                    setExpanded(locked);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

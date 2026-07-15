@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+   
+    <link rel="stylesheet" href="/Styles/Homepage.css">
+    <link rel="stylesheet" href="Styles/bootstrap.min (1).css">
+    <link rel="icon" href="/Pictures/sadetnalogo (2).png" type="image/png">
+    <style>
+        .page{
+            font-size: 1.2rem;
+        }
+        #bg-video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            margin-top: 8%;
+        }
+        #readinggallery{
+            text-align: left; 
+            font-size: 70px;
+            border-left: beige solid 4px;
+            padding-left: 2%;
+            margin-left: 2%;
+            color: rgb(206, 178, 144);
+            font-weight: bold;
+            margin-top: 50px;
+        }
+
+ .hero{
+    margin-top: 50px;
+    margin-bottom: 270px;
+    margin-left: 50px;
+    display:flex;
+    justify-content:left;
+    align-items:center;
+}
+
+.scroll-btn:hover{
+    padding:20px 35px ;
+    transition: .4s;
+}
+
+.scroll-btn{
+    padding:15px 30px;
+    background:#000;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+}
+
+.about{
+    margin-top: 50px;
+}
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="#"><img src="/Pictures/sadetnalogo (2).png" alt="" width="60px" style="display: inline-block; margin-right: 10px;">Reading Gallery</a>
+
+        <!-- Hamburger -->
+        <button class="navbar-toggler ms-auto"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- NAVIGATION -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link page" href="#" id="current">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="books.html" class="nav-link page">Books</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Author (1).html" class="nav-link page">Authors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page" href="Libraries.html">Libraries</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page" href="Sites.html">Reading Sites</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Trivia.html" class="nav-link page">Trivia</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Feedback (2).html" class="nav-link page">Feedback</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+</header>
+<div>
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="/Pictures/lv_0_20260710082904 (2).mp4" type="video/mp4">
+    </video>
+</div>
+
+<!-- HEADING -->
+<h1 id="readinggallery">READING GALLERY</h1>
+<h5 style="color: #F8E9D2; text-align: justify; font-weight: bold; margin-left: 34px;
+font-family: Arial, Helvetica, sans-serif;">Discover the wonderful world of books where knowledge,
+imagination, and creativity come together. <br>
+Explore famous literary works, inspiring quotations,
+and the many benefits of reading.</h5>
+
+<!-- THE SCROLL BUTTON -->
+<div class="hero" style="text-align: left;">
+    <a href="#about" class="scroll-btn">Introduction</a>
+</div>
+
+<!-- INTRODUCTION -->
+<section id="about" class="about">
+  <br>
+  <br>
+  <br>
+  <br>
+   <div  style=" width:85%;
+    margin:5px auto;
+    padding:30px;
+    background:rgba(0, 0, 0, 0.32);
+    border-radius:18px;
+    backdrop-filter:blur(2px);">
+    <h1 style="color: beige; text-shadow: black; font-weight: bold; margin-bottom: 5px;">Welcome to Reading Gallery</h1><br><br>
+
+    <p style="text-align: justify;">Welcome to Reading Gallery, your gateway to the wonderful world of books. Whether you enjoy thrilling adventures, heartwarming stories, inspiring biographies, or educational books, you'll find something that sparks your curiosity and imagination.
+
+Reading is more than just turning pages—it's a journey that helps you learn, grow, and see the world from different perspectives. Every book offers new ideas, valuable lessons, and unforgettable experiences that stay with you long after you've finished reading.
+
+Explore our collection, discover your next favorite book, and let every story inspire you. Open a book today, because every page is the beginning of a new adventure.</p>
+</div>
+</section>
+
+<!-- WELCOME SECTION -->
+<!--<section class="welcome">
+
+<div class="welcome-content">
+
+
+
+
+ <h1>Welcome to the Reading Gallery</h1>
+<div>
+<p>
+Discover the wonderful world of books where knowledge,
+imagination, and creativity come together.
+Explore famous literary works, inspiring quotations,
+and the many benefits of reading.
+</p>
+
+<p class="quotes">
+"A reader lives a thousand lives before he dies.
+The man who never reads lives only one."
+</p>
+
+<p class="author">
+— George R. R. Martin
+</p>
+
+<a href="haha.html" class="btn">
+Explore Books
+</a>
+
+<a href="quotes.html" class="btn">
+Read Quotes
+</a>
+</div> 
+</div>
+
+</section>-->
+
+<!-- INFORMATION -->
+<section>   
+    <h1 style="color: beige; font-weight: bold;">One of the most famous writers in the world</h1>
+<img src="Pictures/william-shakespeare-wikipedia (2).jpg" alt="william-shakespeare" class="img">
+
+<div style=" width:85%;
+    margin:5px auto;
+    padding:30px;
+    background:rgba(0, 0, 0, 0.32);
+    border-radius:18px;
+    backdrop-filter:blur(2px);">
+<h1 style="color: beige; font-weight: bold;">william shakespeare</h1>
+
+<p style="font-style: italic; text-align: justify;">William Shakespeare was an English playwright, poet, and actor who is widely regarded as one of the most famous and influential writers in the world. He was born in Stratford-upon-Avon, England, and wrote around 39 plays and 154 sonnets. Some of his most famous works include *Romeo and Juliet*, *Hamlet*, *Macbeth*, and *Othello*.
+
+Shakespeare's works have greatly influenced literature and theater for centuries. His plays are still performed and studied around the world because of their timeless themes, memorable characters, and beautiful language. He is often called the "Bard of Avon" and is remembered as one of history's greatest writers.
+</div>
+</p>
+</section>
+
+<section>
+   <div class="video-container">
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yhYU4ZbLmmk?si=J9fXtews0-MZySHo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+    </iframe>
+</div><br>
+<div style=" width:85%;
+    margin:5px auto;
+    padding:30px;
+    background:rgba(0, 0, 0, 0.32);
+    border-radius:18px;
+    backdrop-filter:blur(2px);">
+<h4 style="color: beige; font-weight: bold;">The summarize of the video:</h4>
+<p style="text-align: justify; ">Dune is a science fiction novel by Frank Herbert set in a future where humanity lives in a vast empire without computers. The story follows Paul Atreides, who must survive on the dangerous desert planet Arrakis, the only place where the valuable spice melange is found. As he faces political conflict, giant sandworms, and the native Fremen people, Paul embarks on a journey of leadership, survival, and destiny. The novel is known for its rich world-building and themes of power, ecology, and human potential.</p>
+</div>
+</section>
+<!-- OBJECTIVES -->
+
+<section>
+
+<h2 class="objectives-title">
+Website Objectives
+</h2>
+
+<div class="objectives">
+
+<p>This website aims to:</p>
+
+<ul>
+
+<li>📚 Promote the importance of reading books.</li>
+
+<li>🧠 knowledge about books</li>
+
+<li>📖 Increase awareness about libraries and literature.</li>
+
+<li>💡 Inspire people to gain knowledge through reading.</li>
+
+<li>🌍 Help readers appreciate books as a source of wisdom and creativity.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- INTRODUCTION -->
+
+<!-- <section>
+
+<h2>Introduction</h2>
+
+<p>
+
+Reading books is one of the best ways to gain knowledge
+and improve imagination. Every book introduces readers
+to new ideas, cultures, discoveries, and experiences.
+
+</p>
+
+<p>
+
+Reading also improves vocabulary, communication skills,
+critical thinking, and concentration. It encourages
+people to think creatively and understand different
+points of view.
+
+</p>
+
+<p>
+
+Whether reading for school, work, or enjoyment,
+books continue to inspire millions of people around
+the world.
+
+</p>
+
+</section> -->
+
+<!-- WHY READING MATTERS -->
+
+<section>
+
+<h2>Why Reading Matters</h2>
+
+<p>
+
+Reading is more than just a hobby—it is a lifelong skill.
+Every page you read helps you become more knowledgeable,
+creative, and confident.
+
+Books allow us to travel to different places,
+meet unforgettable characters,
+and discover ideas that shape our understanding
+of the world.
+
+The habit of reading also prepares students
+for academic success and lifelong learning.
+
+</p>
+
+</section>
+
+<!-- BENEFITS -->
+
+<section>
+
+<h2>Benefits of Reading</h2>
+
+<div class="book-container">
+
+<div class="book">
+<h3>📖 Better Vocabulary</h3>
+
+<p class="book-desc">
+Reading introduces thousands of new words and improves communication skills.
+</p>
+
+</div>
+
+<div class="book">
+
+<h3>🧠 Stronger Memory</h3>
+
+<p class="book-desc">
+Books help train the brain to remember details and improve focus.
+</p>
+
+</div>
+
+<div class="book">
+
+<h3>💡 Creativity</h3>
+
+<p class="book-desc">
+Stories inspire imagination and encourage creative thinking.
+</p>
+
+</div>
+
+<div class="book">
+
+<h3>🎓 Better Grades</h3>
+
+<p class="book-desc">
+Students who read regularly usually perform better in school.
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- FEATURED BOOK -->
+
+<section>
+
+<h2>Featured Book</h2>
+
+<div class="book-container">
+
+<div class="book">
+
+<img src="Pictures/pic2 (2).jpg" alt="Harry Potter Book">
+
+<h3>Harry Potter and the Philosopher's Stone</h3>
+
+<p class="book-desc">
+Written by J.K. Rowling, this world-famous novel follows the journey of Harry Potter as he discovers that he is a wizard. The story teaches friendship, courage, loyalty, and believing in yourself.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- READING TIPS -->
+
+<section>
+
+<h2>Reading Tips</h2>
+
+<ul>
+
+<li>📚 Read at least 20 minutes every day.</li>
+
+<li>☕ Find a quiet and comfortable place.</li>
+
+<li>📝 Write down new vocabulary words.</li>
+
+<li>🎯 Set a monthly reading goal.</li>
+
+<li>📖 Read books that match your interests.</li>
+
+<li>👨‍👩‍👧 Share your favorite books with friends.</li>
+
+</ul>
+
+</section>
+
+
+
+
+
+<!-- READING CHALLENGE -->
+
+<!-- <section>
+
+<h2>30-Day Reading Challenge</h2>
+
+<ul>
+
+<li>✅ Read for 20 minutes every day.</li>
+
+<li>✅ Finish at least one book.</li>
+
+<li>✅ Learn five new words every week.</li>
+
+<li>✅ Write your favorite quote after every chapter.</li>
+
+<li>✅ Tell your friends what you learned.</li>
+
+</ul>
+
+</section> -->
+
+<!-- FUN FACTS -->
+
+<section>
+
+<h2>Fun Facts About Reading</h2>
+
+<ul>
+
+<li>📚 Reading for only 20 minutes a day exposes you to thousands of words every year.</li>
+
+<li>🧠 Reading improves memory and brain activity.</li>
+
+<li>😌 Reading before bedtime helps people relax.</li>
+
+<li>🌍 Libraries have existed for thousands of years.</li>
+
+<li>✍ Reading regularly helps improve writing skills.</li>
+
+</ul>
+
+</section>
+
+<!-- FAMOUS AUTHORS -->
+
+
+
+<!-- DID YOU KNOW -->
+
+<section>
+
+<h2>Did You Know?</h2>
+
+<p>
+
+Reading is like exercising your brain.
+The more books you read, the more knowledge,
+confidence, vocabulary, and creativity you gain.
+Even reading for just a few minutes each day can make a big difference in your future.
+
+</p>
+
+</section>
+
+<!-- POEM -->
+
+<!-- <section>
+
+<h2>Poem</h2>
+
+<p>
+
+Open a book and turn the page,<br>
+
+Step into a world beyond your age.<br>
+
+With every story, dream, and sight,<br>
+
+Your mind grows stronger, shining bright.<br><br>
+
+Books can teach and books can guide,<br>
+
+Taking you on a joyful ride.<br>
+
+They fill your heart with hope and cheer,<br>
+
+And bring new knowledge every year.<br><br>
+
+So read each day with eager eyes,<br>
+
+Discover wonders and surprise.<br>
+
+For every book you choose to see,<br>
+
+Unlocks a better version of you and me.
+
+</p>
+
+</section> -->
+
+
+
+
+
+<!-- FOOTER -->
+
+<footer>
+    <div class="row">
+        <ul class="list-unstyled col-4 col-xs-6 col-sm-6 col-md-4 col-lg-4">
+            <li><a class="nav-link page" href="#">Home</a></li>
+            <li><a href="pages/books.html" class="nav-link page">Books</a></li>
+            <li><a href="/pages/Authors/Author.html" class="nav-link page">Authors</a></li>
+            <li><a class="nav-link page" href="pages/Libraries.html">Libraries</a></li>
+            <li><a class="nav-link page" href="/pages/Sites.html">Reading Sites</a></li>
+            <li><a href="/pages/Trivia.html" class="nav-link page">Trivia</a></li>
+            <li><a href="/pages/Feedback.html" class="nav-link page">Feedback</a></li>
+        </ul>
+        <ul class="list-unstyled col-4 col-xs-6 col-sm-6 col-md-4 col-lg-4">&copy; <b>Credits</b>
+            <li>IPMX CINEMATIC</li>
+            <li>GEMINI</li>
+            <li>Meta ai</li>
+            <li>BOOKBUB</li>
+            <li>Wikipedia</li>
+            <li>World Atlas</li>
+            <li>Current World Archaeology</li>
+        </ul>
+        <ul class="list-unstyled col-4 col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <li><img src="Pictures/camhi logo.png" alt="CAMHI" width="130px" class="my-4"></li>
+            <li>CAMARINES SUR NATIONAL HIGH SCHOOL</li>
+            <li>Created By: Group6</li>
+            <li>12-Prog1</li>
+        </ul>
+    </div>
+    <p>&copy; <b>2026 Reading Gallery. All Rights Reserved.</b></p>
+</footer>
+
+</body>
+
+</html>
